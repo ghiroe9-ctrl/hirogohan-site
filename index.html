@@ -136,6 +136,20 @@ section:last-of-type{border-bottom:0}
 .fav .desc{font-size:13.5px;color:var(--muted)}
 .fav .go{font-size:13px;font-weight:700;color:var(--leaf)}
 .fav .pr{position:absolute;top:14px;right:14px}
+.hero-photo{position:relative;margin:0;max-width:420px;justify-self:center;width:100%}
+.hero-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 50%;border-radius:200px 200px 24px 24px;box-shadow:0 0 0 8px var(--sun-soft)}
+.sun-dot{position:absolute;top:-14px;right:-6px;width:84px;height:84px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 10px color-mix(in srgb,var(--sun) 25%,transparent)}
+@media (max-width:720px){.hero-photo{max-width:300px;order:-1}.sun-dot{width:60px;height:60px}}
+.story-img{width:min(260px,70%);height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:14px;margin-top:8px}
+.why-gokigen{grid-template-columns:200px 1fr;align-items:center;gap:24px}
+.why-img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:50% 25%;border-radius:16px}
+.why-text{display:grid;gap:10px;min-width:0}
+@media (max-width:640px){.why-gokigen{grid-template-columns:1fr}.why-img{max-width:240px}}
+.media-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:24px}
+@media (max-width:720px){.media-strip{grid-template-columns:repeat(2,1fr)}}
+.media-strip figure{margin:0;display:grid;gap:6px}
+.media-strip img,.media-strip video{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:14px;background:var(--line);display:block}
+.media-strip figcaption{font-size:13px;color:var(--muted);text-align:center}
 footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;gap:8px}
 @media (prefers-reduced-motion:no-preference){.rise{animation:rise 2.4s ease-out both}@keyframes rise{from{transform:translateY(14px)}to{transform:none}}}
 </style>
@@ -163,20 +177,10 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
         <a class="btn ghost" href="#items">自分の体を知るアイテム</a>
       </div>
     </div>
-    <div class="sun-art" aria-hidden="true">
-      <svg viewBox="0 0 300 300">
-        <circle cx="150" cy="150" r="146" fill="var(--sun-soft)"/>
-        <g class="rise">
-          <circle cx="150" cy="168" r="70" fill="var(--sun)"/>
-          <g stroke="var(--sun)" stroke-width="8" stroke-linecap="round">
-            <line x1="150" y1="58" x2="150" y2="78"/><line x1="72" y1="92" x2="86" y2="106"/><line x1="228" y1="92" x2="214" y2="106"/>
-            <line x1="40" y1="168" x2="60" y2="168"/><line x1="240" y1="168" x2="260" y2="168"/>
-          </g>
-        </g>
-        <path d="M4 190 Q150 160 296 190 L296 210 A146 146 0 0 1 4 210 Z" fill="var(--leaf)"/>
-        <path d="M30 236 Q150 214 270 236" stroke="var(--bg)" stroke-width="4" fill="none" stroke-dasharray="2 12" stroke-linecap="round"/>
-      </svg>
-    </div>
+    <figure class="hero-photo">
+      <img src="img/hero.jpg" alt="ソファでグラスを手に笑顔のひろ" width="933" height="1400" fetchpriority="high">
+      <span class="sun-dot" aria-hidden="true"></span>
+    </figure>
   </header>
 
   <section id="about">
@@ -223,6 +227,7 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
       <li>
         <p class="eyebrow">Now</p>
         <h3>体と心の両方に向き合う</h3>
+        <img class="story-img" src="img/journal.jpg" alt="夜、ノートにジャーナリングをするひろ" loading="lazy" width="795" height="1400">
         <p>振り返ると、僕はずっと虚弱体質で、健康とはほど遠い食生活を送っていました。育休中の今は、毎日の記録に加えて、自分の気持ちがどんなときに動くのかを書き出すジャーナリングで、体と心の両方に向き合っています。</p>
       </li>
     </ol>
@@ -243,9 +248,12 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
     </div>
 
     <div class="why-gokigen">
+      <img class="why-img" src="img/plate.jpg" alt="手作りの朝ごはんのプレートを持つひろ" loading="lazy" width="934" height="1400">
+      <div class="why-text">
       <p class="eyebrow">Why "Gokigen"</p>
       <h3>健康の、その先にある「ごきげん」を目指して</h3>
       <p>もともとは「健康になりたい」と思っていました。でも、健康のゴールって意外と分かりにくい。たどり着いたのは、<strong>健康でいられると、ごきげんでいられることが多い</strong>ということでした。体に痛みや不調があると、気持ちも沈んでネガティブになる。体が満たされていると、自然と気持ちも上向きになる。だからこそ、1秒でも1分でも長く、ごきげんでいられる時間を増やしたいと思っています。</p>
+      </div>
     </div>
 
     <div class="for-you">
@@ -266,6 +274,12 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
     <div class="sec-head">
       <p class="eyebrow">Daily Habits</p>
       <h2>今、続けていること</h2>
+    </div>
+    <div class="media-strip">
+      <figure><video src="img/morning-walk.mp4" poster="img/morning-walk.jpg" autoplay muted loop playsinline preload="metadata" aria-label="朝の散歩の様子"></video><figcaption>朝の散歩</figcaption></figure>
+      <figure><img src="img/pilates.jpg" alt="ピラティスのマシンでトレーニングするひろ" loading="lazy" width="1000" height="1333"><figcaption>ピラティス</figcaption></figure>
+      <figure><img src="img/gym.jpg" alt="ジムでトレーニング中のひろ" loading="lazy" width="788" height="1400"><figcaption>筋トレ</figcaption></figure>
+      <figure><img src="img/relax.jpg" alt="ホテルの部屋でくつろぐひろ" loading="lazy" width="933" height="1400"><figcaption>休む時間</figcaption></figure>
     </div>
     <div class="pillars">
       <div class="pillar"><p class="eyebrow">記録</p><h3>毎朝、体重を測る</h3><p>小さな変化に早く気づけるように、毎朝の習慣にしています。</p></div>
@@ -299,8 +313,8 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
       <p>習慣を整える前に、まず今の自分の体を知ることから。気になるものがあれば、公式LINEで気軽にご相談ください。</p>
     </div>
     <div class="items">
-      <div class="item"><div class="top"><span class="eyebrow">腸内環境</span><span class="pr">取扱</span></div><h3>腸内環境検査キット</h3><p>自宅で採取して送るだけ。自分の腸内環境の傾向を知って、食事を見直すきっかけにできます。</p><a href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで詳しく聞く →</a></div>
-      <div class="item"><div class="top"><span class="eyebrow">血糖値</span><span class="pr">取扱</span></div><h3>血糖値の見える化（リブレ）</h3><p>食事のあとの血糖値の動きを記録できます。どの食べ方が自分に合うかを知る手がかりに。</p><a href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで詳しく聞く →</a></div>
+      <div class="item"><div class="top"><span class="eyebrow">腸内環境</span><span class="pr">取扱</span></div><h3>腸内環境検査キット</h3><p>自宅で採取して送るだけ。自分の腸内環境の傾向を知って、食事を見直すきっかけにできます。</p><a href="gut-test.html">僕の体験記を読む →</a><a href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで詳しく聞く →</a></div>
+      <div class="item"><div class="top"><span class="eyebrow">血糖値</span><span class="pr">取扱</span></div><h3>血糖値の見える化（リブレ）</h3><p>食事のあとの血糖値の動きを記録できます。どの食べ方が自分に合うかを知る手がかりに。</p><a href="libre.html">僕の体験記を読む →</a><a href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで詳しく聞く →</a></div>
       <div class="item"><div class="top"><span class="eyebrow">サプリメント</span><span class="pr">取扱</span></div><h3>オーソサプリほか</h3><p>検査や日々の食事を振り返ったうえで、足りないものを補う選択肢として紹介しています。</p><a href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで詳しく聞く →</a></div>
     </div>
     <p class="note">※ ひろは代理店としてこれらの商品を取り扱っています。医療の専門家ではないため、診断や治療の代わりにはなりません。持病のある方や治療中の方は、医師にご相談ください。</p>

@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://ghiroe9-ctrl.github.io/hirogohan-site/sitemap.xml
