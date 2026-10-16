@@ -145,6 +145,11 @@ section:last-of-type{border-bottom:0}
 .fav .desc{font-size:13.5px;color:var(--muted)}
 .fav .go{font-size:13px;font-weight:700;color:var(--leaf)}
 .fav .pr{position:absolute;top:14px;right:14px}
+.fav .btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
+.fav .btns .go{text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:6px 12px}
+.fav .btns .go:hover{border-color:var(--leaf)}
+.fav .btns .rk{color:#bf0000}
+div.fav:hover{transform:none}
 .hero-photo{position:relative;margin:0;max-width:420px;justify-self:center;width:100%}
 .hero-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 50%;border-radius:200px 200px 24px 24px;box-shadow:0 0 0 8px var(--sun-soft)}
 .sun-dot{position:absolute;top:-14px;right:-6px;width:84px;height:84px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 10px color-mix(in srgb,var(--sun) 25%,transparent)}
@@ -333,22 +338,22 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
     <div class="sec-head">
       <p class="eyebrow">Favorites</p>
       <h2>ひろのおすすめアイテム</h2>
-      <p>毎日の習慣づくりに取り入れているものを中心に、Amazonで買えるアイテムを集めました。</p>
+      <p>毎日の習慣づくりに取り入れているものを中心に、Amazon・楽天で買えるアイテムを集めました。</p>
     </div>
     <div class="fav-group">
       <div class="fav-head"><h3>鼻のケア</h3><p>子どものころから鼻炎持ちだった僕の、鼻うがいセット。</p></div>
       <div class="favs">
-        <a class="fav" href="https://link.amazon/B09H36wI8" target="_blank" rel="sponsored noopener"><span class="pr">PR</span><b>ニールメッド サイナスリンス スターターキット</b><span class="desc">鼻うがいを始める人向けのボトルとサッシェのセット。</span><span class="go">Amazonで見る →</span></a>
-        <a class="fav" href="https://link.amazon/B03VZHEAU" target="_blank" rel="sponsored noopener"><span class="pr">PR</span><b>ニールメッド サイナスリンス リフィル120包</b><span class="desc">鼻うがいを継続する人向けの大容量リフィル。</span><span class="go">Amazonで見る →</span></a>
-        <a class="fav" href="https://link.amazon/B074pxl9g" target="_blank" rel="sponsored noopener"><span class="pr">PR</span><b>ニールメッド ナサドック（ボトル乾燥スタンド）</b><span class="desc">鼻うがいボトルを衛生的に乾かして置きたい人向けの専用スタンド。</span><span class="go">Amazonで見る →</span></a>
+        <div class="fav"><span class="pr">PR</span><b>ニールメッド サイナスリンス スターターキット</b><span class="desc">鼻うがいを始める人向けのボトルとサッシェのセット。</span><span class="btns"><a class="go" href="https://link.amazon/B09H36wI8" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hPtedg" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>ニールメッド サイナスリンス リフィル120包</b><span class="desc">鼻うがいを継続する人向けの大容量リフィル。</span><span class="btns"><a class="go" href="https://link.amazon/B03VZHEAU" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/h8ow7J" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>ニールメッド ナサドック（ボトル乾燥スタンド）</b><span class="desc">鼻うがいボトルを衛生的に乾かして置きたい人向けの専用スタンド。</span><span class="btns"><a class="go" href="https://link.amazon/B074pxl9g" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hgDuIF" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
       </div>
     </div>
     <div class="fav-group">
       <div class="fav-head"><h3>食事・間食</h3><p>血糖値の急上昇を防ぐ間食や、毎日の食卓の小さな工夫に。</p></div>
       <div class="favs">
         <a class="fav" href="https://link.amazon/B05D5XBGa" target="_blank" rel="sponsored noopener"><span class="pr">PR</span><b>チアシード蒟蒻ゼリー 20袋</b><span class="desc">小腹が空いたとき用にストックしやすい個包装ゼリー。</span><span class="go">Amazonで見る →</span></a>
-        <a class="fav" href="https://link.amazon/B0eTW7Aax" target="_blank" rel="sponsored noopener"><span class="pr">PR</span><b>ぬちまーす マイソルト 30g</b><span class="desc">外食や旅行にも持ち歩きやすい小型サイズの塩。</span><span class="go">Amazonで見る →</span></a>
-        <a class="fav" href="https://link.amazon/B04jgm917" target="_blank" rel="sponsored noopener"><span class="pr">PR</span><b>小川生薬 乳酸発酵阿波番茶</b><span class="desc">普段のお茶の選択肢として取り入れやすい発酵茶。</span><span class="go">Amazonで見る →</span></a>
+        <div class="fav"><span class="pr">PR</span><b>ぬちまーす マイソルト 30g</b><span class="desc">外食や旅行にも持ち歩きやすい小型サイズの塩。</span><span class="btns"><a class="go" href="https://link.amazon/B0eTW7Aax" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/h5wDbE" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>小川生薬 乳酸発酵阿波番茶</b><span class="desc">普段のお茶の選択肢として取り入れやすい発酵茶。</span><span class="btns"><a class="go" href="https://link.amazon/B04jgm917" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hYNbLR" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
         <a class="fav" href="https://link.amazon/B0cG5hdsS" target="_blank" rel="sponsored noopener"><span class="pr">PR</span><b>ファイン クエン酸 250g</b><span class="desc">飲み物などに使いやすい粉末クエン酸。摂取目安は商品表示に従う。</span><span class="go">Amazonで見る →</span></a>
       </div>
     </div>
@@ -356,19 +361,19 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
       <div class="fav-head"><h3>朝のコーヒー時間</h3><p>1日のスタートを、ごきげんに整える朝の一杯。</p></div>
       <div class="favs">
         <a class="fav" href="https://link.amazon/B08syzjBM" target="_blank" rel="sponsored noopener"><span class="pr">PR</span><b>HARIO ワンカップコーヒーメーカー</b><span class="desc">1杯だけ手軽に淹れたい人向けのコンパクトなコーヒーメーカー。</span><span class="go">Amazonで見る →</span></a>
-        <a class="fav" href="https://link.amazon/B0en5ajE2" target="_blank" rel="sponsored noopener"><span class="pr">PR</span><b>仙台勝山館 バターコーヒー 180g</b><span class="desc">お湯に溶かすタイプのバターコーヒー。食品として好みや生活に合わせて。</span><span class="go">Amazonで見る →</span></a>
-        <a class="fav" href="https://link.amazon/B092bFzk0" target="_blank" rel="sponsored noopener"><span class="pr">PR</span><b>RAPID MCTオイル C8 360g</b><span class="desc">飲み物や食事に取り入れやすいMCTオイル。摂取量は商品表示に従う。</span><span class="go">Amazonで見る →</span></a>
-        <a class="fav" href="https://link.amazon/B0dfk2wpe" target="_blank" rel="sponsored noopener"><span class="pr">PR</span><b>Westgold グラスフェッドバター（無塩）1kg</b><span class="desc">料理やコーヒーなどに使える大容量の無塩バター。</span><span class="go">Amazonで見る →</span></a>
+        <div class="fav"><span class="pr">PR</span><b>仙台勝山館 バターコーヒー 180g</b><span class="desc">お湯に溶かすタイプのバターコーヒー。食品として好みや生活に合わせて。</span><span class="btns"><a class="go" href="https://link.amazon/B0en5ajE2" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/h90WrN" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>RAPID MCTオイル C8 360g</b><span class="desc">飲み物や食事に取り入れやすいMCTオイル。摂取量は商品表示に従う。</span><span class="btns"><a class="go" href="https://link.amazon/B092bFzk0" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hY02Ts" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>Westgold グラスフェッドバター（無塩）1kg</b><span class="desc">料理やコーヒーなどに使える大容量の無塩バター。</span><span class="btns"><a class="go" href="https://link.amazon/B0dfk2wpe" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hRacZa" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
       </div>
     </div>
     <div class="fav-group">
       <div class="fav-head"><h3>体づくり・セルフケア</h3><p>トレーニングと、毎日のケアに。</p></div>
       <div class="favs">
         <a class="fav" href="https://link.amazon/B0hCNvm85" target="_blank" rel="sponsored noopener"><span class="pr">PR</span><b>OgarMade クレアチン 1kg</b><span class="desc">トレーニング習慣に合わせて使いやすい大容量のクレアチンパウダー。</span><span class="go">Amazonで見る →</span></a>
-        <a class="fav" href="https://link.amazon/B00FnD1S1" target="_blank" rel="sponsored noopener"><span class="pr">PR</span><b>フロアフロス 250m</b><span class="desc">毎日のオーラルケアに使いやすい大容量フロス。</span><span class="go">Amazonで見る →</span></a>
+        <div class="fav"><span class="pr">PR</span><b>フロアフロス 250m</b><span class="desc">毎日のオーラルケアに使いやすい大容量フロス。</span><span class="btns"><a class="go" href="https://link.amazon/B00FnD1S1" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hgXTpm" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
       </div>
     </div>
-    <p class="note">※ このセクションはAmazonアソシエイトのリンクを含みます。Amazonのアソシエイトとして、ひろごはんは適格販売により収入を得ています。価格や在庫は変わることがあるため、購入前にAmazonの商品ページでご確認ください。食品やサプリメントは、商品に表示された摂取の目安に従ってください。</p>
+    <p class="note">※ このセクションはAmazonアソシエイト・楽天アフィリエイトのリンクを含みます。Amazonのアソシエイトとして、ひろごはんは適格販売により収入を得ています。価格や在庫は変わることがあるため、購入前に各ショップの商品ページでご確認ください。食品やサプリメントは、商品に表示された摂取の目安に従ってください。</p>
   </section>
 
   <section id="product">
@@ -428,7 +433,7 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
 
 <footer class="wrap">
   <p>当サイトの内容は個人の実践記録であり、医学的な助言ではありません。体調に不安がある方は医療機関にご相談ください。</p>
-  <p>Amazonのアソシエイトとして、ひろごはんは適格販売により収入を得ています。</p>
+  <p>Amazonのアソシエイトとして、ひろごはんは適格販売により収入を得ています。当サイトは楽天アフィリエイトに参加しています。</p>
   <p><a href="privacy.html">プライバシーポリシー・広告について</a></p>
   <p>© 2026 ひろごはん</p>
 </footer>
