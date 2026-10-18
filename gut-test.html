@@ -87,5 +87,25 @@ footer{max-width:720px;margin-inline:auto;padding-block:24px 48px;font-size:12.5
 <p class="note">※ この記事は僕個人の体験です。体質や感じ方には個人差があります。気になる症状が続く場合は、医療機関にご相談ください。ひろは代理店として腸内環境検査キットを取り扱っています。</p>
 </main>
 <footer>© 2026 ひろごはん ／ <a href="privacy.html">プライバシーポリシー・広告について</a></footer>
+<script>
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href]');
+  if (!a || typeof gtag !== 'function') return;
+  var h = a.href, store = '';
+  if (/amazon\.co\.jp|amzn\.|link\.amazon/.test(h)) store = 'amazon';
+  else if (/r10\.to|rakuten\.co\.jp/.test(h)) store = 'rakuten';
+  else if (/line\.me|lin\.ee/.test(h)) store = 'line';
+  if (!store) return;
+  var card = a.closest('.fav, .item');
+  var name = card && card.querySelector('b, h3') ? card.querySelector('b, h3').textContent.trim() : a.textContent.trim();
+  var grp = a.closest('.fav-group');
+  gtag('event', store === 'line' ? 'line_click' : 'affiliate_click', {
+    store: store,
+    item_name: name.slice(0, 100),
+    item_category: grp && grp.querySelector('h3') ? grp.querySelector('h3').textContent.trim() : '',
+    page: location.pathname
+  });
+});
+</script>
 </body>
 </html>

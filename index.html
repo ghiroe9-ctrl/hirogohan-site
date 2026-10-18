@@ -528,5 +528,25 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
   <p><a href="privacy.html">プライバシーポリシー・広告について</a></p>
   <p>© 2026 ひろごはん</p>
 </footer>
+<script>
+document.addEventListener('click', function (e) {
+  var a = e.target.closest && e.target.closest('a[href]');
+  if (!a || typeof gtag !== 'function') return;
+  var h = a.href, store = '';
+  if (/amazon\.co\.jp|amzn\.|link\.amazon/.test(h)) store = 'amazon';
+  else if (/r10\.to|rakuten\.co\.jp/.test(h)) store = 'rakuten';
+  else if (/line\.me|lin\.ee/.test(h)) store = 'line';
+  if (!store) return;
+  var card = a.closest('.fav, .item');
+  var name = card && card.querySelector('b, h3') ? card.querySelector('b, h3').textContent.trim() : a.textContent.trim();
+  var grp = a.closest('.fav-group');
+  gtag('event', store === 'line' ? 'line_click' : 'affiliate_click', {
+    store: store,
+    item_name: name.slice(0, 100),
+    item_category: grp && grp.querySelector('h3') ? grp.querySelector('h3').textContent.trim() : '',
+    page: location.pathname
+  });
+});
+</script>
 </body>
 </html>
