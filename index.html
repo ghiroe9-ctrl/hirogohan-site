@@ -164,6 +164,10 @@ div.fav:hover{transform:none}
 .media-strip figure{margin:0;display:grid;gap:6px}
 .media-strip img,.media-strip video{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:14px;background:var(--line);display:block}
 .media-strip figcaption{font-size:13px;color:var(--muted);text-align:center}
+.fav-nav{display:flex;flex-wrap:wrap;gap:8px;margin:-12px 0 20px}
+.fav-nav a{font-size:13.5px;font-weight:700;text-decoration:none;border:1.5px solid var(--line);border-radius:99px;padding:5px 14px;color:var(--ink);background:var(--surface)}
+.fav-nav a:hover{border-color:var(--leaf);color:var(--leaf)}
+.fav-group{scroll-margin-top:80px}
 footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;gap:8px}
 @media (prefers-reduced-motion:no-preference){.rise{animation:rise 2.4s ease-out both}@keyframes rise{from{transform:translateY(14px)}to{transform:none}}}
 </style>
@@ -338,42 +342,93 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
     <div class="sec-head">
       <p class="eyebrow">Favorites</p>
       <h2>ひろのおすすめアイテム</h2>
-      <p>毎日の習慣づくりに取り入れているものを中心に、Amazon・楽天で買えるアイテムを集めました。</p>
+      <p>僕が実際に使っているものを、カテゴリごとにまとめました。Amazon・楽天で買えます。</p>
     </div>
-    <div class="fav-group">
+    <nav class="fav-nav" aria-label="おすすめアイテムのカテゴリ">
+      <a href="#fav-0">食品・調味料</a>
+      <a href="#fav-1">朝のコーヒー時間</a>
+      <a href="#fav-2">サプリメント・栄養補助</a>
+      <a href="#fav-3">キッチン家電・道具</a>
+      <a href="#fav-4">日用品</a>
+      <a href="#fav-5">鼻のケア</a>
+      <a href="#fav-6">スキンケア</a>
+      <a href="#fav-7">ヘアケア・身だしなみ</a>
+    </nav>
+    <div class="fav-group" id="fav-0">
+      <div class="fav-head"><h3>食品・調味料</h3><p>毎日の食卓の土台になる、調味料と食材。</p></div>
+      <div class="favs">
+        <div class="fav"><span class="pr">PR</span><b>足立醸造 国産有機醤油 濃口 720ml</b><span class="desc">国産有機の大豆と小麦でつくられた、毎日使う定番の醤油。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0CZDQSH22?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>福光屋 福みりん 純米本味醂 720ml</b><span class="desc">三年熟成の純米本みりん。煮物や照り焼きに。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0CF98L16H?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>ICONO エキストラバージンオリーブオイル FRUITY 500ml</b><span class="desc">サラダやそのままかけて使いやすい、フルーティーなオリーブオイル。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B01D1DCJHE?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>ぬちまーす マイソルト 30g</b><span class="desc">外食や旅行にも持ち歩きやすい小型サイズの塩。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B008E4H7KU?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/h5wDbE" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>小川生薬 乳酸発酵阿波番茶</b><span class="desc">普段のお茶の選択肢として取り入れやすい発酵茶。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B07FBD6QBK?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hYNbLR" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>チアシード蒟蒻ゼリー 20袋</b><span class="desc">小腹が空いたとき用にストックしやすい個包装ゼリー。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0DCHRR8LQ?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+      </div>
+    </div>
+    <div class="fav-group" id="fav-1">
+      <div class="fav-head"><h3>朝のコーヒー時間</h3><p>1日のスタートを、ごきげんに整える朝の一杯。</p></div>
+      <div class="favs">
+        <div class="fav"><span class="pr">PR</span><b>仙台勝山館 バターコーヒー 180g</b><span class="desc">お湯に溶かすだけのバターコーヒー。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0BDQ5CF2M?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/h90WrN" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>RAPID MCTオイル C8 360g</b><span class="desc">コーヒーや食事に足しやすいMCTオイル。摂取量は商品表示に従ってください。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B09ZYBNYBB?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hY02Ts" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>Westgold グラスフェッドバター（無塩）1kg</b><span class="desc">料理やコーヒーに使える大容量の無塩バター。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B01DTZDEEQ?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hRacZa" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>電動ミルクフォーマー</b><span class="desc">ボタンひとつで、コーヒーにのせるミルクの泡がつくれる。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0DWWV92D8?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+      </div>
+    </div>
+    <div class="fav-group" id="fav-2">
+      <div class="fav-head"><h3>サプリメント・栄養補助</h3><p>トレーニングと、食事だけで足りない分の補助に。</p></div>
+      <div class="favs">
+        <div class="fav"><span class="pr">PR</span><b>アンビーク オールインワンEAA ピーチ 1kg</b><span class="desc">トレーニングの日に水に溶かして飲んでいるEAA。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0CSSHNLJ9?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>OgarMade クレアチン 1kg</b><span class="desc">トレーニング習慣に合わせて使いやすい大容量のクレアチンパウダー。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0D6DR75GG?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>ファイン クエン酸 250g</b><span class="desc">飲み物などに使いやすい粉末クエン酸。摂取目安は商品表示に従ってください。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B000BA6B1Q?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+      </div>
+    </div>
+    <div class="fav-group" id="fav-3">
+      <div class="fav-head"><h3>キッチン家電・道具</h3><p>自炊を続けやすくしてくれる、台所の相棒。</p></div>
+      <div class="favs">
+        <div class="fav"><span class="pr">PR</span><b>東芝 石窯ドーム ER-D7000A</b><span class="desc">焼く・蒸す・温めるが1台でできるオーブンレンジ。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0DNYLQJS8?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>タニタ クッキングスケール KF-200</b><span class="desc">食材の重さを手早く量れて、食事の記録にも使えるスケール。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B01LZA1UM3?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>HARIO ワンカップコーヒーメーカー</b><span class="desc">1杯だけ手軽に淹れたい人向けのコンパクトなコーヒーメーカー。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B07NRX8J8X?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+      </div>
+    </div>
+    <div class="fav-group" id="fav-4">
+      <div class="fav-head"><h3>日用品</h3><p>毎日使うものほど、ちょっと良いものに。</p></div>
+      <div class="favs">
+        <div class="fav"><span class="pr">PR</span><b>Natty 自動ソープディスペンサー（泡タイプ）</b><span class="desc">手をかざすだけで泡が出る、キッチンや洗面所に置けるディスペンサー。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0FG1BBK7T?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>ジョイ W除菌 逆さボトル 290mL</b><span class="desc">逆さに置けて、すぐ出せる食器用洗剤。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0BBGL5H27?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>パナソニック ジアイーノ用 塩タブレット F-ZVC03</b><span class="desc">ジアイーノ用の交換タブレット。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B074N33H8W?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+      </div>
+    </div>
+    <div class="fav-group" id="fav-5">
       <div class="fav-head"><h3>鼻のケア</h3><p>子どものころから鼻炎持ちだった僕の、鼻うがいセット。</p></div>
       <div class="favs">
         <div class="fav"><span class="pr">PR</span><b>ニールメッド サイナスリンス スターターキット</b><span class="desc">鼻うがいを始める人向けのボトルとサッシェのセット。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B07TBDBRH8?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hPtedg" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
-        <div class="fav"><span class="pr">PR</span><b>ニールメッド サイナスリンス リフィル120包</b><span class="desc">鼻うがいを継続する人向けの大容量リフィル。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B01198R98W?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/h8ow7J" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
-        <div class="fav"><span class="pr">PR</span><b>ニールメッド ナサドック（ボトル乾燥スタンド）</b><span class="desc">鼻うがいボトルを衛生的に乾かして置きたい人向けの専用スタンド。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B004158IWM?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hgDuIF" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>ニールメッド サイナスリンス リフィル120包</b><span class="desc">鼻うがいを続ける人向けの大容量リフィル。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B01198R98W?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/h8ow7J" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>ニールメッド ナサドック（ボトル乾燥スタンド）</b><span class="desc">鼻うがいボトルを乾かして置ける専用スタンド。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B004158IWM?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hgDuIF" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
       </div>
     </div>
-    <div class="fav-group">
-      <div class="fav-head"><h3>食事・間食</h3><p>血糖値の急上昇を防ぐ間食や、毎日の食卓の小さな工夫に。</p></div>
+    <div class="fav-group" id="fav-6">
+      <div class="fav-head"><h3>スキンケア</h3><p>洗う・うるおす・守るを、シンプルに。</p></div>
       <div class="favs">
-        <a class="fav" href="https://www.amazon.co.jp/dp/B0DCHRR8LQ?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener"><span class="pr">PR</span><b>チアシード蒟蒻ゼリー 20袋</b><span class="desc">小腹が空いたとき用にストックしやすい個包装ゼリー。</span><span class="go">Amazonで見る →</span></a>
-        <div class="fav"><span class="pr">PR</span><b>ぬちまーす マイソルト 30g</b><span class="desc">外食や旅行にも持ち歩きやすい小型サイズの塩。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B008E4H7KU?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/h5wDbE" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
-        <div class="fav"><span class="pr">PR</span><b>小川生薬 乳酸発酵阿波番茶</b><span class="desc">普段のお茶の選択肢として取り入れやすい発酵茶。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B07FBD6QBK?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hYNbLR" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
-        <a class="fav" href="https://www.amazon.co.jp/dp/B000BA6B1Q?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener"><span class="pr">PR</span><b>ファイン クエン酸 250g</b><span class="desc">飲み物などに使いやすい粉末クエン酸。摂取目安は商品表示に従う。</span><span class="go">Amazonで見る →</span></a>
+        <div class="fav"><span class="pr">PR</span><b>ニベア クリアビューティー 弱酸性泡洗顔</b><span class="desc">泡で出てくる洗顔料。朝の時短に。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B09KMS7SGV?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>ミノン アミノモイスト モイストミルキィ クレンジング</b><span class="desc">ミルクタイプのクレンジング。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0FL6GK1W8?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>COSRX プロポリス シナジートナー 280ml</b><span class="desc">たっぷり使える大容量の化粧水。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B07XHHRXDZ?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>SKIN1004 ヒアルーシカ サンセラム 50ml</b><span class="desc">みずみずしい使い心地の日焼け止め美容液。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0B881GN1P?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>THE DERMA VC100 シートマスク</b><span class="desc">スペシャルケアの日に使っているシートマスク。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0GLXY6W46?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>THE DERMA BEST 5 レチノール+コラーゲン 20枚</b><span class="desc">毎日使いやすい枚数入りのシートマスク。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0FRRPSN8K?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
       </div>
     </div>
-    <div class="fav-group">
-      <div class="fav-head"><h3>朝のコーヒー時間</h3><p>1日のスタートを、ごきげんに整える朝の一杯。</p></div>
+    <div class="fav-group" id="fav-7">
+      <div class="fav-head"><h3>ヘアケア・身だしなみ</h3><p>撮影の日も、普段の日も。</p></div>
       <div class="favs">
-        <a class="fav" href="https://www.amazon.co.jp/dp/B07NRX8J8X?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener"><span class="pr">PR</span><b>HARIO ワンカップコーヒーメーカー</b><span class="desc">1杯だけ手軽に淹れたい人向けのコンパクトなコーヒーメーカー。</span><span class="go">Amazonで見る →</span></a>
-        <div class="fav"><span class="pr">PR</span><b>仙台勝山館 バターコーヒー 180g</b><span class="desc">お湯に溶かすタイプのバターコーヒー。食品として好みや生活に合わせて。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0BDQ5CF2M?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/h90WrN" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
-        <div class="fav"><span class="pr">PR</span><b>RAPID MCTオイル C8 360g</b><span class="desc">飲み物や食事に取り入れやすいMCTオイル。摂取量は商品表示に従う。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B09ZYBNYBB?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hY02Ts" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
-        <div class="fav"><span class="pr">PR</span><b>Westgold グラスフェッドバター（無塩）1kg</b><span class="desc">料理やコーヒーなどに使える大容量の無塩バター。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B01DTZDEEQ?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hRacZa" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
-      </div>
-    </div>
-    <div class="fav-group">
-      <div class="fav-head"><h3>体づくり・セルフケア</h3><p>トレーニングと、毎日のケアに。</p></div>
-      <div class="favs">
-        <a class="fav" href="https://www.amazon.co.jp/dp/B0D6DR75GG?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener"><span class="pr">PR</span><b>OgarMade クレアチン 1kg</b><span class="desc">トレーニング習慣に合わせて使いやすい大容量のクレアチンパウダー。</span><span class="go">Amazonで見る →</span></a>
+        <div class="fav"><span class="pr">PR</span><b>パナソニック ナノケア EH-NA0K</b><span class="desc">毎日使っているヘアドライヤー。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0FHGWST7P?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>OLAPLEX No.6 ボンドスムーサー 100ml</b><span class="desc">洗い流さないタイプのヘアトリートメント。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B07PW4MTHV?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>オールドスパイス ピュアスポーツ デオドラント 85g</b><span class="desc">スティックタイプのデオドラント。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0CGZ3JSP1?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>パナソニック ボディフェリエ ES-NWRF2</b><span class="desc">ボディ用のシェーバー。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0GFN73N97?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>GINN PIN 鼻毛カッター</b><span class="desc">持ち歩きやすい手動タイプの鼻毛カッター。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0DMR1W7NN?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
         <div class="fav"><span class="pr">PR</span><b>フロアフロス 250m</b><span class="desc">毎日のオーラルケアに使いやすい大容量フロス。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B088NH2RHG?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hgXTpm" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
       </div>
     </div>
-    <p class="note">※ このセクションはAmazonアソシエイト・楽天アフィリエイトのリンクを含みます。Amazonのアソシエイトとして、ひろごはんは適格販売により収入を得ています。価格や在庫は変わることがあるため、購入前に各ショップの商品ページでご確認ください。食品やサプリメントは、商品に表示された摂取の目安に従ってください。</p>
+    <p class="note">※ このセクションはAmazonアソシエイト・楽天アフィリエイトのリンクを含みます。Amazonのアソシエイトとして、ひろごはんは適格販売により収入を得ています。価格や在庫は変わることがあるため、購入前に各ショップの商品ページでご確認ください。食品やサプリメントは、商品に表示された摂取の目安に従ってください。化粧品の使い心地には個人差があります。</p>
   </section>
 
   <section id="product">
