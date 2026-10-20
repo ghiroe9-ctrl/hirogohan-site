@@ -13,7 +13,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>ひろごはん｜ごきげん習慣コーチ 公式サイト</title>
-<meta name="description" content="ひろごはん（ひろ）の公式サイト。朝活・食事・睡眠・運動の習慣で、毎日をごきげんに。血糖値・腸内環境から自分の体を知るためのアイテムや、公式LINEの無料特典・無料相談をご案内しています。">
+<meta name="description" content="ひろごはん（ひろ）の公式サイト。朝活・食事・睡眠・運動の習慣で、毎日をごきげんに。血糖値・腸内環境から自分の体を知るためのアイテムや、公式LINE登録者には、カロリーと栄養素を記録・分析できる食事コーチアプリをプレゼントしています。">
 <meta property="og:title" content="ひろごはん｜ごきげん習慣コーチ">
 <meta property="og:description" content="毎日を、ごきげんに。朝活・食事・睡眠・運動の習慣から人生を整える。">
 <meta property="og:type" content="website">
@@ -100,6 +100,26 @@ section:last-of-type{border-bottom:0}
 .line-box h2{font-size:clamp(22px,4vw,30px)}
 .line-box ul{margin:14px 0 0;padding-left:1.2em;font-size:15px}
 .line-box .btn{background:var(--line-green);color:#fff}
+.coach{display:grid;grid-template-columns:1.15fr .85fr;gap:40px;align-items:center;background:var(--surface);border:1px solid var(--line);border-radius:28px;padding:40px}
+@media (max-width:820px){.coach{grid-template-columns:1fr;padding:24px;gap:28px}}
+.coach-head{display:flex;gap:14px;align-items:center}
+.coach-head img{width:64px;height:64px;border-radius:50%;border:3px solid var(--sun-soft);flex:none}
+.coach h2{font-size:clamp(24px,4.4vw,34px);margin-top:4px}
+.coach h2 em{font-style:normal;background:linear-gradient(transparent 62%,var(--sun) 62%)}
+.coach .lead{color:var(--muted);margin:16px 0 22px}
+.coach-feats{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+.coach-feats li{display:grid;grid-template-columns:34px 1fr;gap:12px;align-items:start}
+.coach-feats i{font-style:normal;font-family:var(--mono);font-size:13px;font-weight:700;width:34px;height:34px;border-radius:50%;display:grid;place-items:center;background:var(--sun-soft);color:var(--ink)}
+.coach-feats b{display:block;font-size:16px}
+.coach-feats span{font-size:14px;color:var(--muted)}
+.coach-cta{margin-top:26px;display:grid;gap:10px;justify-items:start}
+.coach-cta .btn{background:var(--line-green);color:#fff}
+.coach-steps{font-size:13px;color:var(--muted);margin:0}
+.coach-shot{margin:0;justify-self:center;max-width:320px;position:relative}
+.coach-shot img{width:100%;height:auto;border-radius:22px;box-shadow:0 18px 40px rgba(29,53,41,.18);border:1px solid var(--line);display:block}
+.coach-shot figcaption{font-size:12px;color:var(--muted);text-align:center;margin-top:10px}
+.coach-badge{position:absolute;top:-14px;left:-10px;background:var(--sun);color:#1D3529;font-weight:700;font-size:13px;border-radius:99px;padding:6px 14px;transform:rotate(-4deg)}
+@media (max-width:820px){.coach-shot{max-width:270px}}
 .sns{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 @media (max-width:720px){.sns{grid-template-columns:repeat(2,1fr)}}
 .sns a{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:16px;text-decoration:none;display:grid;gap:2px}
@@ -177,7 +197,7 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
   <div class="wrap">
     <a class="logo" href="#top"><i></i>ひろごはん<small class="logo-sub">ごきげん習慣コーチ</small></a>
     <div class="nav-links">
-      <a href="#about">ストーリー</a><a href="#habits">習慣</a><a href="#insights">わかったこと</a><a href="#items">アイテム</a><a href="#favorites">おすすめ</a><a href="#sns">SNS</a><a href="#work">お仕事依頼</a>
+      <a href="#coach-app">食事コーチ</a><a href="#about">ストーリー</a><a href="#habits">習慣</a><a href="#insights">わかったこと</a><a href="#items">アイテム</a><a href="#favorites">おすすめ</a><a href="#sns">SNS</a><a href="#work">お仕事依頼</a>
     </div>
     <a class="btn-line" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINE登録</a>
   </div>
@@ -191,7 +211,7 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
       <p class="lead">朝活・食事・睡眠・運動。血糖値や腸内環境から自分の体を知って、続けられる習慣で毎日を整えていきます。</p>
       <p class="who"><b>ひろごはん</b>　ごきげん習慣コーチ ／ 36歳・会社員・1児のパパ</p>
       <div class="hero-ctas">
-        <a class="btn primary" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで無料特典を受け取る</a>
+        <a class="btn primary" href="#coach-app">LINEで食事コーチアプリを受け取る</a>
         <a class="btn ghost" href="#items">自分の体を知るアイテム</a>
       </div>
     </div>
@@ -200,6 +220,30 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
       <span class="sun-dot" aria-hidden="true"></span>
     </figure>
   </header>
+
+  <section id="coach-app">
+    <div class="coach">
+      <div>
+        <div class="coach-head"><img src="img/coach-icon.png" alt="食事コーチのキャラクター" width="64" height="64"><div><p class="eyebrow">LINE登録者限定プレゼント</p><h2>食事コーチアプリを<br><em>無料でプレゼント</em></h2></div></div>
+        <p class="lead">頑張っているのに体が変わらないとき、原因は「なんとなくの食事」にあることが多いです。食べたものを記録して、今の自分の食事を数字で見える化しましょう。</p>
+        <ul class="coach-feats">
+          <li><i>01</i><div><b>写真を送るだけで、毎日の食事を記録</b><span>日付ごとに記録が残るので、続けるほど自分の食べ方のクセが見えてきます。</span></div></li>
+          <li><i>02</i><div><b>食べすぎ？足りない？がひと目でわかる</b><span>1日の目標カロリーに対して、今どれくらい食べているか。増量ペースなのか、減量ペースなのかがわかります。</span></div></li>
+          <li><i>03</i><div><b>PFCからビタミン・ミネラルまで分析</b><span>タンパク質・脂質・炭水化物のバランスに加えて、食物繊維や塩分、ビタミン・ミネラルの摂取量もチェックできます。</span></div></li>
+          <li><i>04</i><div><b>足りない栄養の補い方をアドバイス</b><span>食事のアドバイスに加えて、不足しがちな栄養はサプリメントでの上手な補い方もお伝えします。</span></div></li>
+        </ul>
+        <div class="coach-cta">
+          <a class="btn" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINE登録して食事コーチを受け取る</a>
+          <p class="coach-steps">① 公式LINEを友だち追加 → ② あいさつメッセージから「食事コーチ」を追加 → ③ 食事の写真を送って記録スタート</p>
+        </div>
+      </div>
+      <figure class="coach-shot">
+        <span class="coach-badge">無料</span>
+        <img src="img/coach-record.jpg" alt="食事コーチアプリの記録画面。この食事697kcal、今日の残り575kcal、PFC・食物繊維・塩分のバー、コーチのアドバイスが表示されている" width="591" height="1123" loading="lazy">
+        <figcaption>実際の記録画面（ひろの食事）。数値は写真からの推定値です。</figcaption>
+      </figure>
+    </div>
+  </section>
 
   <section id="about">
     <div class="sec-head">
@@ -480,11 +524,11 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
     <div class="line-box">
       <div>
         <p class="eyebrow">LINE</p>
-        <h2>友だち追加で「自分の身体の取り扱い説明書」をプレゼント</h2>
-        <ul><li>無料特典「自分の身体の取り扱い説明書」</li><li>体のことの無料相談</li><li>オリジナル商品の先行案内</li></ul>
+        <h2>友だち追加で「食事コーチアプリ」をプレゼント</h2>
+        <ul><li>食事コーチアプリ（カロリー・栄養素の記録と分析）</li><li>無料特典「自分の身体の取り扱い説明書」</li><li>体のことの無料相談</li><li>オリジナル商品の先行案内</li></ul>
       </div>
       <div style="display:grid;gap:8px;justify-items:start">
-        <a class="btn" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">友だち追加して特典を受け取る</a>
+        <a class="btn" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">友だち追加して食事コーチを受け取る</a>
         <span class="note" style="margin:0">ID：@433gemgx</span>
       </div>
     </div>
