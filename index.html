@@ -376,10 +376,11 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
     </div>
     <div class="items">
       <div class="item"><div class="top"><span class="eyebrow">腸内環境</span><span class="pr">取扱</span></div><h3>腸内環境検査キット</h3><p>自宅で採取して送るだけ。自分の腸内環境の傾向を知って、食事を見直すきっかけにできます。</p><a href="gut-test.html">僕の体験記を読む →</a><a href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで詳しく聞く →</a></div>
+      <div class="item"><div class="top"><span class="eyebrow">腸内フローラ</span><span class="pr">PR</span></div><h3>腸内フローラ検査（マイキンソー）</h3><p>僕が最初に受けた検査。自宅で採取してポストに出すだけで、約1か月後に結果がスマホで見られます。まず気軽に傾向を知りたい人に。</p><a href="mykinso.html">僕の体験記を読む →</a><a href="https://px.a8.net/svt/ejp?a8mat=4BEL1L+6TW1MA+5SF2+5YJRM" rel="nofollow sponsored" target="_blank">公式サイトで見る（PR） →</a></div>
       <div class="item"><div class="top"><span class="eyebrow">血糖値</span><span class="pr">取扱</span></div><h3>血糖値の見える化（リブレ）</h3><p>食事のあとの血糖値の動きを記録できます。どの食べ方が自分に合うかを知る手がかりに。</p><a href="libre.html">僕の体験記を読む →</a><a href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで詳しく聞く →</a></div>
       <div class="item"><div class="top"><span class="eyebrow">サプリメント</span><span class="pr">取扱</span></div><h3>オーソサプリほか</h3><p>検査や日々の食事を振り返ったうえで、足りないものを補う選択肢として紹介しています。</p><a href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで詳しく聞く →</a></div>
     </div>
-    <p class="note">※ ひろは代理店としてこれらの商品を取り扱っています。医療の専門家ではないため、診断や治療の代わりにはなりません。持病のある方や治療中の方は、医師にご相談ください。</p>
+    <p class="note">※ ひろは代理店としてこれらの商品を取り扱っています（「PR」のついたものはアフィリエイトリンクです）。医療の専門家ではないため、診断や治療の代わりにはなりません。持病のある方や治療中の方は、医師にご相談ください。</p>
   </section>
 
   <section id="favorites">
@@ -579,6 +580,7 @@ document.addEventListener('click', function (e) {
   var h = a.href, store = '';
   if (/amazon\.co\.jp|amzn\.|link\.amazon/.test(h)) store = 'amazon';
   else if (/r10\.to|rakuten\.co\.jp/.test(h)) store = 'rakuten';
+  else if (/a8\.net/.test(h)) store = 'a8';
   else if (/line\.me|lin\.ee/.test(h)) store = 'line';
   if (!store) return;
   var card = a.closest('.fav, .item');

@@ -97,6 +97,7 @@ document.addEventListener('click', function (e) {
   var h = a.href, store = '';
   if (/amazon\.co\.jp|amzn\.|link\.amazon/.test(h)) store = 'amazon';
   else if (/r10\.to|rakuten\.co\.jp/.test(h)) store = 'rakuten';
+  else if (/a8\.net/.test(h)) store = 'a8';
   else if (/line\.me|lin\.ee/.test(h)) store = 'line';
   if (!store) return;
   var card = a.closest('.fav, .item');
