@@ -45,7 +45,7 @@ p{margin:0}
 a{color:inherit}
 a:focus-visible,button:focus-visible{outline:3px solid var(--sun);outline-offset:3px;border-radius:6px}
 .eyebrow{font-family:var(--mono);font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--leaf)}
-nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);margin-inline:-20px;padding:12px 20px;border-bottom:1px solid var(--line)}
+body>nav{position:sticky;top:0;z-index:5;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(8px);margin-inline:-20px;padding:12px 20px;border-bottom:1px solid var(--line)}
 nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:12px}
 .logo{font-family:var(--display);font-weight:900;font-size:18px;text-decoration:none;display:flex;align-items:center;gap:8px}
 .logo-sub{font-family:var(--body);font-weight:500;font-size:12px;color:var(--muted)}
@@ -165,6 +165,7 @@ section:last-of-type{border-bottom:0}
 .fav .desc{font-size:13.5px;color:var(--muted)}
 .fav .go{font-size:13px;font-weight:700;color:var(--leaf)}
 .fav .pr{position:absolute;top:14px;right:14px}
+.fav .oshi{justify-self:start;font-size:11.5px;font-weight:700;background:var(--sun);color:#1D3529;border-radius:99px;padding:2px 10px}
 .fav .btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:2px}
 .fav .btns .go{text-decoration:none;border:1px solid var(--line);border-radius:999px;padding:6px 12px}
 .fav .btns .go:hover{border-color:var(--leaf)}
@@ -393,6 +394,7 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
       <a href="#fav-0">食品・調味料</a>
       <a href="#fav-1">朝のコーヒー時間</a>
       <a href="#fav-2">サプリメント・栄養補助</a>
+      <a href="#fav-10">補食・間食・おやつ</a>
       <a href="#fav-3">キッチン家電・道具</a>
       <a href="#fav-4">日用品</a>
       <a href="#fav-5">鼻のケア</a>
@@ -434,6 +436,21 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
         <div class="fav"><span class="pr">PR</span><b>OgarMade クレアチン 1kg</b><span class="desc">トレーニング習慣に合わせて使いやすい大容量のクレアチンパウダー。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0D6DR75GG?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/h5CiFm" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
         <div class="fav"><span class="pr">PR</span><b>ファイン クエン酸 250g</b><span class="desc">飲み物などに使いやすい粉末クエン酸。摂取目安は商品表示に従ってください。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B000BA6B1Q?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hgY31v" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
         <div class="fav"><span class="pr">PR</span><b>アンビーク オールインワンEAA レモン 620g</b><span class="desc">人工甘味料不使用のオールインワンEAA。レモン味の620g。摂取量は商品表示に従ってください。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B098QF45L1?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/h5RCjG" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+      </div>
+    </div>
+    <div class="fav-group" id="fav-10">
+      <div class="fav-head"><h3>補食・間食・おやつ</h3><p>小腹がすいたときや、朝を抜く日・運動の前後に。たんぱく質や食物繊維をとれるものを選んでいます。</p></div>
+      <div class="favs">
+        <div class="fav"><span class="pr">PR</span><span class="oshi">ひろの推し</span><b>ストロングバー ミルク（白）</b><span class="desc">原材料8つ・砂糖不使用のプロテインバー。たんぱく質21g、食物繊維10g。やさしいミルク味で、いちばんリピートしている味。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0D9VJTN5X?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/h9wEVA" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><span class="oshi">ひろの推し</span><b>ストロングバー ベリーミックス（ピンク）</b><span class="desc">甘酸っぱいベリー味。たんぱく質22g・食物繊維10g・砂糖不使用。白と交互に食べるお気に入り。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0D9VJ5QZT?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/h49JwA" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>ストロングバー カカオ（黒）</b><span class="desc">カカオのほろ苦さがある大人っぽい味。たんぱく質約22g・食物繊維10g・砂糖不使用。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0D9NNZ7CX?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/h5AyjE" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>ストロングバー 抹茶ラテ（青）</b><span class="desc">抹茶ラテ味。たんぱく質22g・食物繊維11.5g・砂糖不使用。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0D9VJCB2K?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hYmM0z" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>SOY Concept プロテインバー（3種）</b><span class="desc">大豆由来の植物性プロテインバー。乳製品を控えたい日の間食に。カカオ・アーモンド・ブラックセサミの3種類。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B07RBFHNNQ?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazon カカオ →</a><a class="go" href="https://www.amazon.co.jp/dp/B07RBFTQLW?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazon アーモンド →</a><a class="go" href="https://www.amazon.co.jp/dp/B08GC7BL6J?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazon 黒ごま →</a><a class="go rk" href="https://a.r10.to/hRsxKO" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>一週間分のロカボナッツ（チーズ・小魚入りアソート）</b><span class="desc">素焼きナッツの小分けパック。チーズ入り・小魚入りのアソートで飽きにくい。朝を抜く日やデスクの間食に。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0D8ZVMHJ4?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hgQkvu" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>ローカーボプラス 美容低糖質ナッツ プロテインプラス 220g×2</b><span class="desc">カルディでも見かける低糖質ナッツミックス。大袋なので、小皿に取り分けて食べるのがおすすめ。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0DTCSJ9TJ?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>成城石井 濃蜜やきいも 180g（冷蔵）</b><span class="desc">袋から出してそのまま食べられる冷やし焼きいも。甘いものが欲しいときや、運動前のエネルギー補給に。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B0FWJK12LX?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hevBjx" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>八海山 麹だけでつくったあまさけ 118g×40本</b><span class="desc">砂糖不使用、米と麹だけの甘酒。飲みきりサイズなので持ち運びに便利（要冷蔵）。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B07ZJ1H468?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/hP17dX" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
+        <div class="fav"><span class="pr">PR</span><b>八海山 麹だけでつくったあまさけ 825g×3本</b><span class="desc">同じ甘酒の大容量ボトル。自宅の冷蔵庫用に。</span><span class="btns"><a class="go" href="https://www.amazon.co.jp/dp/B01N664NN6?tag=hirogohan-web-22" target="_blank" rel="sponsored noopener">Amazonで見る →</a><a class="go rk" href="https://a.r10.to/h5cuw1" target="_blank" rel="sponsored noopener">楽天で見る →</a></span></div>
       </div>
     </div>
     <div class="fav-group" id="fav-3">
