@@ -68,6 +68,17 @@ section:last-of-type{border-bottom:0}
 .hero .who{margin-top:24px;font-size:14px;color:var(--muted)}
 .hero .who b{color:var(--ink);font-family:var(--display);font-size:18px}
 .hero-ctas{display:flex;flex-wrap:wrap;gap:12px;margin-top:28px}
+.hero-offer{margin-top:28px;background:var(--surface);border:1.5px solid var(--line);border-radius:20px;padding:18px 18px 20px;max-width:30em}
+.hero-offer-label{font-size:14px;line-height:1.7;font-weight:700}
+.hero-offer-label span{display:inline-block;background:var(--line-green);color:#fff;font-size:12px;padding:2px 10px;border-radius:99px;margin-right:8px;vertical-align:1px}
+.hero-offer .hero-ctas{margin-top:14px}
+.sticky-line{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:6;display:none;align-items:center;justify-content:space-between;gap:10px;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:10px 10px 10px 16px;box-shadow:0 8px 24px rgba(0,0,0,.14);transform:translateY(140%);transition:transform .25s ease}
+.sticky-line.show{transform:none}
+.sticky-line p{font-size:13px;line-height:1.5;font-weight:700}
+.sticky-line p small{display:block;font-weight:500;color:var(--muted);font-size:11px}
+.sticky-line .btn{background:var(--line-green);color:#fff;padding:10px 16px;font-size:14px;white-space:nowrap}
+@media (max-width:720px){.sticky-line{display:flex}body{padding-bottom:84px}}
+@media (prefers-reduced-motion:reduce){.sticky-line{transition:none}}
 .btn{display:inline-flex;align-items:center;gap:8px;text-decoration:none;font-weight:700;padding:13px 22px;border-radius:99px;font-size:15px}
 .btn.primary{background:var(--line-green);color:#fff}
 .btn.ghost{border:1.5px solid var(--ink)}
@@ -174,7 +185,7 @@ div.fav:hover{transform:none}
 .hero-photo{position:relative;margin:0;max-width:420px;justify-self:center;width:100%}
 .hero-photo img{display:block;width:100%;height:auto;aspect-ratio:4/5;object-fit:cover;object-position:50% 50%;border-radius:200px 200px 24px 24px;box-shadow:0 0 0 8px var(--sun-soft)}
 .sun-dot{position:absolute;top:-14px;right:-6px;width:84px;height:84px;border-radius:50%;background:var(--sun);box-shadow:0 0 0 10px color-mix(in srgb,var(--sun) 25%,transparent)}
-@media (max-width:720px){.hero-photo{max-width:300px;order:-1}.sun-dot{width:60px;height:60px}}
+@media (max-width:720px){.hero-photo{max-width:170px;order:-1}.sun-dot{width:46px;height:46px;top:-8px;right:-4px}.hero{padding-block:24px 56px;gap:20px}.hero h1{margin-top:6px}.hero .lead{margin-top:12px;font-size:16px}.hero .who{margin-top:12px}.hero-offer{margin-top:18px}}
 .story-img{width:min(260px,70%);height:auto;aspect-ratio:3/4;object-fit:cover;border-radius:14px;margin-top:8px}
 .why-gokigen{grid-template-columns:200px 1fr;align-items:center;gap:24px}
 .why-img{width:100%;height:auto;aspect-ratio:3/4;object-fit:cover;object-position:50% 25%;border-radius:16px}
@@ -200,7 +211,7 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
     <div class="nav-links">
       <a href="#coach-app">食事コーチ</a><a href="#about">ストーリー</a><a href="#habits">習慣</a><a href="#insights">わかったこと</a><a href="#items">アイテム</a><a href="#favorites">おすすめ</a><a href="#sns">SNS</a><a href="#work">お仕事依頼</a>
     </div>
-    <a class="btn-line" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINE登録</a>
+    <a data-cta="nav" class="btn-line" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINE登録</a>
   </div>
 </nav>
 
@@ -211,9 +222,12 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
       <h1>毎日を、<br><em>ごきげんに</em>。</h1>
       <p class="lead">朝活・食事・睡眠・運動。血糖値や腸内環境から自分の体を知って、続けられる習慣で毎日を整えていきます。</p>
       <p class="who"><b>ひろごはん</b>　ごきげん習慣コーチ ／ 36歳・会社員・1児のパパ</p>
-      <div class="hero-ctas">
-        <a class="btn primary" href="#coach-app">LINEで食事コーチアプリを受け取る</a>
-        <a class="btn ghost" href="#items">自分の体を知るアイテム</a>
+      <div class="hero-offer">
+        <p class="hero-offer-label"><span>LINE登録で無料</span>写真を送るだけでカロリー・栄養がわかる「食事コーチアプリ」をプレゼント</p>
+        <div class="hero-ctas">
+          <a class="btn primary" data-cta="hero" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで無料で受け取る</a>
+          <a class="btn ghost" href="#coach-app">どんなアプリ？</a>
+        </div>
       </div>
     </div>
     <figure class="hero-photo">
@@ -234,7 +248,7 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
           <li><i>04</i><div><b>足りない栄養の補い方をアドバイス</b><span>食事のアドバイスに加えて、不足しがちな栄養はサプリメントでの上手な補い方もお伝えします。</span></div></li>
         </ul>
         <div class="coach-cta">
-          <a class="btn" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINE登録して食事コーチを受け取る</a>
+          <a data-cta="coach" class="btn" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINE登録して食事コーチを受け取る</a>
           <p class="coach-steps">① 公式LINEを友だち追加 → ② あいさつメッセージから「食事コーチ」を追加 → ③ 食事を写真・テキスト・音声で送って記録スタート</p>
         </div>
       </div>
@@ -376,10 +390,10 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
       <p>習慣を整える前に、まず今の自分の体を知ることから。気になるものがあれば、公式LINEで気軽にご相談ください。</p>
     </div>
     <div class="items">
-      <div class="item"><div class="top"><span class="eyebrow">腸内環境</span><span class="pr">取扱</span></div><h3>腸内環境検査キット</h3><p>自宅で採取して送るだけ。自分の腸内環境の傾向を知って、食事を見直すきっかけにできます。</p><a href="gut-test.html">僕の体験記を読む →</a><a href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで詳しく聞く →</a></div>
+      <div class="item"><div class="top"><span class="eyebrow">腸内環境</span><span class="pr">取扱</span></div><h3>腸内環境検査キット</h3><p>自宅で採取して送るだけ。自分の腸内環境の傾向を知って、食事を見直すきっかけにできます。</p><a href="gut-test.html">僕の体験記を読む →</a><a data-cta="items" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで詳しく聞く →</a></div>
       <div class="item"><div class="top"><span class="eyebrow">腸内フローラ</span><span class="pr">PR</span></div><h3>腸内フローラ検査（マイキンソー）</h3><p>僕が最初に受けた検査。自宅で採取してポストに出すだけで、約1か月後に結果がスマホで見られます。まず気軽に傾向を知りたい人に。</p><a href="mykinso.html">僕の体験記を読む →</a><a href="https://px.a8.net/svt/ejp?a8mat=4BEL1L+6TW1MA+5SF2+5YJRM" rel="nofollow sponsored" target="_blank">公式サイトで見る（PR） →</a></div>
-      <div class="item"><div class="top"><span class="eyebrow">血糖値</span><span class="pr">取扱</span></div><h3>血糖値の見える化（リブレ）</h3><p>食事のあとの血糖値の動きを記録できます。どの食べ方が自分に合うかを知る手がかりに。</p><a href="libre.html">僕の体験記を読む →</a><a href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで詳しく聞く →</a></div>
-      <div class="item"><div class="top"><span class="eyebrow">サプリメント</span><span class="pr">取扱</span></div><h3>オーソサプリほか</h3><p>検査や日々の食事を振り返ったうえで、足りないものを補う選択肢として紹介しています。</p><a href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで詳しく聞く →</a></div>
+      <div class="item"><div class="top"><span class="eyebrow">血糖値</span><span class="pr">取扱</span></div><h3>血糖値の見える化（リブレ）</h3><p>食事のあとの血糖値の動きを記録できます。どの食べ方が自分に合うかを知る手がかりに。</p><a href="libre.html">僕の体験記を読む →</a><a data-cta="items" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで詳しく聞く →</a></div>
+      <div class="item"><div class="top"><span class="eyebrow">サプリメント</span><span class="pr">取扱</span></div><h3>オーソサプリほか</h3><p>検査や日々の食事を振り返ったうえで、足りないものを補う選択肢として紹介しています。</p><a data-cta="items" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで詳しく聞く →</a></div>
     </div>
     <p class="note">※ ひろは代理店としてこれらの商品を取り扱っています（「PR」のついたものはアフィリエイトリンクです）。医療の専門家ではないため、診断や治療の代わりにはなりません。持病のある方や治療中の方は、医師にご相談ください。</p>
   </section>
@@ -535,7 +549,7 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
       <p class="eyebrow">Coming Soon</p>
       <h2>ごきげん習慣のオリジナル商品を準備中</h2>
       <p>僕が続けてきた習慣を、誰でも始められる形にまとめる予定です。内容と公開時期は、公式LINEで最初にお知らせします。</p>
-      <a class="btn" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで先行案内を受け取る</a>
+      <a data-cta="product" class="btn" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで先行案内を受け取る</a>
     </div>
   </section>
 
@@ -547,7 +561,7 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
         <ul><li>食事コーチアプリ（カロリー・栄養素の記録と分析）</li><li>無料特典「自分の身体の取り扱い説明書」</li><li>体のことの無料相談</li><li>オリジナル商品の先行案内</li></ul>
       </div>
       <div style="display:grid;gap:8px;justify-items:start">
-        <a class="btn" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">友だち追加して食事コーチを受け取る</a>
+        <a data-cta="line-section" class="btn" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">友だち追加して食事コーチを受け取る</a>
         <span class="note" style="margin:0">ID：@433gemgx</span>
       </div>
     </div>
@@ -579,7 +593,7 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
       <div class="contact">
         <p class="eyebrow">Contact</p>
         <p>お問い合わせは、公式LINEのトーク、またはInstagramのDMからお送りください。</p>
-        <a class="btn primary" style="justify-self:start" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">公式LINEで問い合わせる</a>
+        <a data-cta="contact" class="btn primary" style="justify-self:start" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">公式LINEで問い合わせる</a>
       </div>
     </div>
   </section>
@@ -591,6 +605,20 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
   <p><a href="privacy.html">プライバシーポリシー・広告について</a></p>
   <p>© 2026 ひろごはん</p>
 </footer>
+<div class="sticky-line" id="sticky-line" aria-hidden="true">
+  <p>食事コーチアプリを無料で<small>LINE登録でプレゼント</small></p>
+  <a class="btn" data-cta="sticky" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener" tabindex="-1">LINEで受け取る</a>
+</div>
+<script>
+(function(){
+  var bar=document.getElementById('sticky-line'); if(!bar||!('IntersectionObserver' in window)) return;
+  var hero=document.querySelector(".hero-offer"), lineSec=document.getElementById('line'), coach=document.querySelector('.coach-cta');
+  var vis={hero:true,line:false,coach:false};
+  function upd(){var on=!vis.hero&&!vis.line&&!vis.coach;bar.classList.toggle('show',on);bar.setAttribute('aria-hidden',on?'false':'true');var a=bar.querySelector('a');if(on)a.removeAttribute('tabindex');else a.setAttribute('tabindex','-1');}
+  var io=new IntersectionObserver(function(es){es.forEach(function(e){var k=e.target===hero?'hero':e.target===lineSec?'line':'coach';vis[k]=k==='hero'?e.intersectionRatio>=0.6:e.isIntersecting;});upd();},{threshold:[0,0.6,1]});
+  [hero,lineSec,coach].forEach(function(el){if(el)io.observe(el);});
+})();
+</script>
 <script>
 document.addEventListener('click', function (e) {
   var a = e.target.closest && e.target.closest('a[href]');
@@ -608,7 +636,8 @@ document.addEventListener('click', function (e) {
     store: store,
     item_name: name.slice(0, 100),
     item_category: grp && grp.querySelector('h3') ? grp.querySelector('h3').textContent.trim() : '',
-    page: location.pathname
+    page: location.pathname,
+    cta: a.getAttribute('data-cta') || 'other'
   });
 });
 </script>

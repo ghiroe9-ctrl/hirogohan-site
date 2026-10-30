@@ -82,7 +82,7 @@ footer{max-width:720px;margin-inline:auto;padding-block:24px 48px;font-size:12.5
 <div class="cta">
   <h2>気になったら、公式LINEで気軽にご相談ください</h2>
   <p>検査キットやリブレについて、僕が実際に使ってみて分かったことをもとにお答えします。友だち追加で無料特典「自分の身体の取り扱い説明書」もお届けしています。</p>
-  <a class="btn" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">公式LINEで相談する（無料）</a>
+  <a class="btn" data-cta="article" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">公式LINEで相談する（無料）</a>
 </div>
 <p class="note">※ この記事は僕個人の体験です。体質や感じ方には個人差があります。気になる症状が続く場合は、医療機関にご相談ください。ひろは代理店として腸内環境検査キットを取り扱っています。</p>
 </main>
@@ -104,7 +104,8 @@ document.addEventListener('click', function (e) {
     store: store,
     item_name: name.slice(0, 100),
     item_category: grp && grp.querySelector('h3') ? grp.querySelector('h3').textContent.trim() : '',
-    page: location.pathname
+    page: location.pathname,
+    cta: a.getAttribute('data-cta') || 'other'
   });
 });
 </script>

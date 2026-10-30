@@ -128,7 +128,7 @@ footer{max-width:720px;margin-inline:auto;padding-block:24px 48px;font-size:12.5
 <div class="cta">
   <h2>「結果を見ても、何を変えればいいかわからない」という方へ</h2>
   <p>検査結果の読み方や、そのあとの食事の整え方は、公式LINEで無料でご相談いただけます。相談しながら進めたい方には、専門家の解説つきの<a href="gut-test.html" style="color:var(--sun)">腸内環境検査（代理店として取り扱い）</a>もご案内しています。</p>
-  <a class="btn" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">公式LINEで相談する（無料）</a>
+  <a class="btn" data-cta="article" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">公式LINEで相談する（無料）</a>
 </div>
 <p class="note">※ この記事は僕個人の体験です。検査結果の受け止め方や体質には個人差があり、検査は病気の診断をするものではありません。気になる症状が続く場合は、医療機関にご相談ください。</p>
 </main>
@@ -150,7 +150,8 @@ document.addEventListener('click', function (e) {
     store: store,
     item_name: name.slice(0, 100),
     item_category: grp && grp.querySelector('h3') ? grp.querySelector('h3').textContent.trim() : '',
-    page: location.pathname
+    page: location.pathname,
+    cta: a.getAttribute('data-cta') || 'other'
   });
 });
 </script>

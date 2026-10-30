@@ -67,7 +67,8 @@ document.addEventListener('click', function (e) {
     store: store,
     item_name: name.slice(0, 100),
     item_category: grp && grp.querySelector('h3') ? grp.querySelector('h3').textContent.trim() : '',
-    page: location.pathname
+    page: location.pathname,
+    cta: a.getAttribute('data-cta') || 'other'
   });
 });
 </script>

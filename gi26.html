@@ -115,7 +115,7 @@ document.addEventListener('click', function (e) {
   else if (/a8\.net/.test(h)) store = 'a8';
   else if (/line\.me|lin\.ee/.test(h)) store = 'line';
   if (!store) return;
-  gtag('event', store === 'line' ? 'line_click' : 'affiliate_click', {store: store, item_name: 'GI26 ダークチョコレート', item_category: '補食・間食・おやつ', page: location.pathname});
+  gtag('event', store === 'line' ? 'line_click' : 'affiliate_click', {store: store, item_name: 'GI26 ダークチョコレート', item_category: '補食・間食・おやつ', page: location.pathname, cta: a.getAttribute('data-cta') || 'other'});
 });
 </script>
 </body>
