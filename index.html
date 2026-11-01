@@ -8,6 +8,23 @@
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
+  // 自分の端末を計測から除外: ?notrack=1 で除外ON / ?notrack=0 で解除（端末・ブラウザごとに保存）
+  (function(){
+    var k='hirogohan_notrack', p=new URLSearchParams(location.search).get('notrack'), on=false;
+    try{
+      if(p==='1') localStorage.setItem(k,'1');
+      if(p==='0') localStorage.removeItem(k);
+      on = localStorage.getItem(k)==='1';
+    }catch(e){}
+    if(on) window['ga-disable-G-JDY5L52VSH']=true;
+    if(p==='1'||p==='0') document.addEventListener('DOMContentLoaded',function(){
+      var d=document.createElement('div');
+      d.textContent = on ? 'この端末は計測から除外されています（ひろ用）' : 'この端末の計測除外を解除しました';
+      d.style.cssText='position:fixed;left:12px;right:12px;top:12px;z-index:99999;padding:12px 14px;border-radius:10px;background:#2b2b2b;color:#fff;font:600 14px/1.5 sans-serif;text-align:center;box-shadow:0 4px 16px rgba(0,0,0,.25)';
+      document.body.appendChild(d); setTimeout(function(){d.remove();},5000);
+    });
+  })();
+
   gtag('config', 'G-JDY5L52VSH');
 </script>
 <meta charset="utf-8">
