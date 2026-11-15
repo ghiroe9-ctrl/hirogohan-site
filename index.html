@@ -283,6 +283,39 @@ div.fav:hover{transform:none}
 .fav-group{scroll-margin-top:80px}
 footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;gap:8px}
 @media (prefers-reduced-motion:no-preference){.rise{animation:rise 2.4s ease-out both}@keyframes rise{from{transform:translateY(14px)}to{transform:none}}}
+.plans{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:stretch}
+.plan{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:24px;display:grid;gap:10px;align-content:start}
+.plan.main{background:var(--ink);color:var(--bg);border-color:var(--ink)}
+.plan-badge{justify-self:start;font-size:12px;font-weight:700;padding:4px 12px;border-radius:99px;background:var(--bg);color:var(--muted)}
+.plan.main .plan-badge{background:var(--sun);color:#1D3529}
+.plan h3{font-size:20px}
+.plan-price{font-family:var(--display);font-weight:900;font-size:34px;line-height:1.2;font-variant-numeric:tabular-nums}
+.plan-price small{font-family:var(--body);font-size:13px;font-weight:500;margin-left:4px}
+.plan-aim{font-size:14px;color:var(--muted)}
+.plan.main .plan-aim{color:inherit;opacity:.85}
+.plan ul{margin:6px 0 0;padding-left:1.2em;font-size:14px;display:grid;gap:4px}
+.nav-links a{white-space:nowrap}
+nav .logo-sub{display:none}
+.nav-links{gap:14px}
+.menu-sub{font-size:20px;margin:44px 0 16px}
+.cmp-wrap{overflow-x:auto;border:1px solid var(--line);border-radius:16px;background:var(--surface)}
+.cmp{width:100%;min-width:620px;border-collapse:collapse;font-size:14px}
+.cmp th,.cmp td{padding:12px 14px;text-align:left;border-bottom:1px solid var(--line);vertical-align:top}
+.cmp tbody tr:last-child th,.cmp tbody tr:last-child td{border-bottom:0}
+.cmp thead th{font-family:var(--display);font-size:15px;background:var(--bg)}
+.cmp tbody th{color:var(--muted);font-weight:500;white-space:nowrap}
+.cmp .hl{background:var(--sun-soft)}
+.cmp thead small{font-size:11px;color:var(--leaf)}
+.menu-flow{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:10px;counter-reset:st}
+.menu-flow li{counter-increment:st;background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:14px;display:grid;gap:4px;min-width:0}
+.menu-flow li::before{content:"STEP " counter(st);font-family:var(--mono);font-size:11px;color:var(--leaf);letter-spacing:.08em}
+.menu-flow b{font-family:var(--display);font-size:15px}
+.menu-flow span{font-size:13px;color:var(--muted);line-height:1.6}
+.menu-rules{list-style:none;margin:12px 0 0;padding:0;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
+.menu-rules li{background:var(--sun-soft);border-radius:12px;padding:12px 14px;display:grid;gap:2px}
+.menu-rules span{font-size:12px;color:var(--muted)}
+.menu-rules b{font-family:var(--display);font-size:16px}
+@media (max-width:760px){.plans{grid-template-columns:1fr}.menu-flow{grid-template-columns:1fr}.menu-rules{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
@@ -290,7 +323,7 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
   <div class="wrap">
     <a class="logo" href="#top"><i></i>ひろごはん<small class="logo-sub">ごきげん習慣コーチ</small></a>
     <div class="nav-links">
-      <a href="#coach-app">食事コーチ</a><a href="#about">ストーリー</a><a href="#habits">習慣</a><a href="#insights">わかったこと</a><a href="#items">アイテム</a><a href="#favorites">おすすめ</a><a href="#sns">SNS</a><a href="#work">お仕事依頼</a>
+      <a href="#coach-app">食事コーチ</a><a href="#about">ストーリー</a><a href="#habits">習慣</a><a href="#insights">わかったこと</a><a href="#menu">メニュー</a><a href="#items">アイテム</a><a href="#favorites">おすすめ</a><a href="#sns">SNS</a><a href="#work">お仕事依頼</a>
     </div>
     <a data-cta="nav" class="btn-line" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINE登録</a>
   </div>
@@ -708,13 +741,47 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
     <p class="note">※ このセクションはAmazonアソシエイト・楽天アフィリエイトのリンクを含みます。Amazonのアソシエイトとして、ひろごはんは適格販売により収入を得ています。価格や在庫は変わることがあるため、購入前に各ショップの商品ページでご確認ください。食品やサプリメントは、商品に表示された摂取の目安に従ってください。化粧品の使い心地には個人差があります。</p>
   </section>
 
-  <section id="product">
-    <div class="product">
-      <p class="eyebrow">Coming Soon</p>
-      <h2>ごきげん習慣のオリジナル商品を準備中</h2>
-      <p>僕が続けてきた習慣を、誰でも始められる形にまとめる予定です。内容と公開時期は、公式LINEで最初にお知らせします。</p>
-      <a data-cta="product" class="btn" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで先行案内を受け取る</a>
+  <section id="menu">
+    <div class="sec-head">
+      <p class="eyebrow">Support Menu</p>
+      <h2>リブレ伴走サポート</h2>
+      <p>血糖値の動きと検査で、自分の体の反応を知る。そこから、続けられる習慣をいっしょに作ります。期間に合わせて3つのプランがあります。</p>
     </div>
+    <div class="plans">
+      <article class="plan">
+        <span class="plan-badge">まずは試したい方に</span>
+        <h3>2週間 伴走</h3>
+        <p class="plan-price">50,000<small>円（税込）</small></p>
+        <p class="plan-aim">血糖値の動きを見て、自分の体の反応を知る</p>
+        <ul><li>リブレ 1個（14日間）</li><li>個別面談 2回（開始前・終了後）</li><li>LINEで14日間の伴走</li><li>14日間のデータレポート＋振り返り</li><li>「反応した食事」メモ</li></ul>
+      </article>
+      <article class="plan">
+        <span class="plan-badge">習慣にしたい方に</span>
+        <h3>1か月 サポート</h3>
+        <p class="plan-price">148,000<small>円（税込）</small></p>
+        <p class="plan-aim">知ったことを、続けられる習慣にする</p>
+        <ul><li>リブレ 1個（前半14日間）</li><li><b>＋栄養検査</b></li><li>個別面談 3回（開始・中間・終了）</li><li>LINEで1か月の伴走</li><li>レポート＋栄養検査の読み解き</li><li>自分用の「食べ方ルール」</li></ul>
+      </article>
+      <article class="plan main">
+        <span class="plan-badge">いちばんおすすめ</span>
+        <h3>2か月 サポート</h3>
+        <p class="plan-price">198,000<small>円（税込）</small></p>
+        <p class="plan-aim">腸と栄養まで知って、自分専用の整え方を作る</p>
+        <ul><li>リブレ 2個（1か月目と2か月目）</li><li><b>＋栄養検査 ＋腸内検査</b></li><li>個別面談 5回（2週ごと）</li><li>LINEで2か月＋終了後1か月のフォロー</li><li>1回目と2回目の比較レポート＋検査2種の読み解き</li><li>自分用の「整え方ガイド」（食事・運動・睡眠）</li></ul>
+      </article>
+    </div>
+    <h3 class="menu-sub">プランの比較</h3>
+    <div class="cmp-wrap">
+      <table class="cmp">
+        <thead><tr><th scope="col"></th><th scope="col">2週間 伴走</th><th scope="col">1か月 サポート</th><th scope="col" class="hl">2か月 サポート<br><small>おすすめ</small></th></tr></thead>
+        <tbody><tr><th scope="row">料金（税込）</th><td>50,000円</td><td>148,000円</td><td class="hl">198,000円</td></tr><tr><th scope="row">リブレ</th><td>1個（14日間）</td><td>1個（前半14日間）</td><td class="hl">2個（1か月目と2か月目）</td></tr><tr><th scope="row">検査</th><td>なし</td><td>栄養検査</td><td class="hl">栄養検査＋腸内検査</td></tr><tr><th scope="row">個別面談</th><td>2回</td><td>3回</td><td class="hl">5回（2週ごと）</td></tr><tr><th scope="row">LINEでの伴走</th><td>14日間</td><td>1か月</td><td class="hl">2か月＋終了後1か月</td></tr><tr><th scope="row">レポート</th><td>14日間のレポート</td><td>＋栄養検査の読み解き</td><td class="hl">比較レポート＋検査2種の読み解き</td></tr><tr><th scope="row">もらえるもの</th><td>「反応した食事」メモ</td><td>「食べ方ルール」</td><td class="hl">「整え方ガイド」</td></tr></tbody>
+      </table>
+    </div>
+    <h3 class="menu-sub">お申し込みからの流れ</h3>
+    <ol class="menu-flow"><li><b>お申し込み</b><span>月末までに公式LINEでお申し込み</span></li><li><b>事前の準備</b><span>リブレと検査キットをお届け。開始前の面談</span></li><li><b>スタート</b><span>翌月10日からリブレを装着。LINEで伴走</span></li><li><b>レポート</b><span>14日間が終わってから約3日でお届け</span></li><li><b>振り返り</b><span>面談で読み解き、次の習慣を決める</span></li></ol>
+    <ul class="menu-rules"><li><span>締め切り</span><b>毎月末</b></li><li><span>スタート</span><b>翌月10日</b></li><li><span>定員</span><b>各プラン 毎月1名</b></li></ul>
+    <p style="margin-top:28px"><a data-cta="menu" class="btn primary" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">公式LINEで相談・申し込む</a></p>
+    <p class="note">※ このサポートは医療行為ではありません。病気の診断や治療を目的としたものではなく、食事と体の関係を見える化し、自分に合う習慣づくりをサポートするものです。検査は腸活パズル（医師の管理下のもとやっています）を通じて行います。持病のある方や治療中の方は、お申し込みの前に医師にご相談ください。</p>
   </section>
 
   <section id="line">
