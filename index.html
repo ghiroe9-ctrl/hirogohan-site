@@ -292,6 +292,8 @@ footer{padding-block:36px 48px;font-size:12.5px;color:var(--muted);display:grid;
 .plan h3{font-size:20px}
 .plan-price{font-family:var(--display);font-weight:900;font-size:34px;line-height:1.2;font-variant-numeric:tabular-nums}
 .plan-price small{font-family:var(--body);font-size:13px;font-weight:500;margin-left:4px}
+.plan-kit{font-size:13px;font-weight:700;color:var(--muted);margin-top:-4px}
+.plan.main .plan-kit{color:inherit;opacity:.9}
 .plan-aim{font-size:14px;color:var(--muted)}
 .plan.main .plan-aim{color:inherit;opacity:.85}
 .plan ul{margin:6px 0 0;padding-left:1.2em;font-size:14px;display:grid;gap:4px}
@@ -753,6 +755,7 @@ nav .logo-sub{display:none}
         <span class="plan-badge">まずは試したい方に</span>
         <h3>2週間 伴走</h3>
         <p class="plan-price">50,000<small>円（税込）</small></p>
+        <p class="plan-kit">検査キット代含む（約1万円相当）</p>
         <p class="plan-aim">血糖値の動きを見て、自分の体の反応を知る</p>
         <ul><li>リブレ 1個（14日間）</li><li>個別面談 2回（開始前・終了後）</li><li>LINEで14日間の伴走</li><li>14日間のデータレポート＋振り返り</li><li>「反応した食事」メモ</li></ul>
       </article>
@@ -760,6 +763,7 @@ nav .logo-sub{display:none}
         <span class="plan-badge">習慣にしたい方に</span>
         <h3>1か月 サポート</h3>
         <p class="plan-price">148,000<small>円（税込）</small></p>
+        <p class="plan-kit">機材・検査キット代含む</p>
         <p class="plan-aim">知ったことを、続けられる習慣にする</p>
         <ul><li>リブレ 1個（前半14日間）</li><li><b>＋栄養検査</b></li><li>個別面談 3回（開始・中間・終了）</li><li>LINEで1か月の伴走</li><li>レポート＋栄養検査の読み解き</li><li>自分用の「食べ方ルール」</li></ul>
       </article>
@@ -767,6 +771,7 @@ nav .logo-sub{display:none}
         <span class="plan-badge">いちばんおすすめ</span>
         <h3>2か月 サポート</h3>
         <p class="plan-price">198,000<small>円（税込）</small></p>
+        <p class="plan-kit">機材・検査キット代含む（約5万円相当）</p>
         <p class="plan-aim">腸と栄養まで知って、自分専用の整え方を作る</p>
         <ul><li>リブレ 2個（1か月目と2か月目）</li><li><b>＋栄養検査 ＋腸内検査</b></li><li>個別面談 5回（2週ごと）</li><li>LINEで2か月＋終了後1か月のフォロー</li><li>1回目と2回目の比較レポート＋検査2種の読み解き</li><li>自分用の「整え方ガイド」（食事・運動・睡眠）</li></ul>
       </article>
@@ -775,7 +780,7 @@ nav .logo-sub{display:none}
     <div class="cmp-wrap">
       <table class="cmp">
         <thead><tr><th scope="col"></th><th scope="col">2週間 伴走</th><th scope="col">1か月 サポート</th><th scope="col" class="hl">2か月 サポート<br><small>おすすめ</small></th></tr></thead>
-        <tbody><tr><th scope="row">料金（税込）</th><td>50,000円</td><td>148,000円</td><td class="hl">198,000円</td></tr><tr><th scope="row">リブレ</th><td>1個（14日間）</td><td>1個（前半14日間）</td><td class="hl">2個（1か月目と2か月目）</td></tr><tr><th scope="row">検査</th><td>なし</td><td>栄養検査</td><td class="hl">栄養検査＋腸内検査</td></tr><tr><th scope="row">個別面談</th><td>2回</td><td>3回</td><td class="hl">5回（2週ごと）</td></tr><tr><th scope="row">LINEでの伴走</th><td>14日間</td><td>1か月</td><td class="hl">2か月＋終了後1か月</td></tr><tr><th scope="row">レポート</th><td>14日間のレポート</td><td>＋栄養検査の読み解き</td><td class="hl">比較レポート＋検査2種の読み解き</td></tr><tr><th scope="row">もらえるもの</th><td>「反応した食事」メモ</td><td>「食べ方ルール」</td><td class="hl">「整え方ガイド」</td></tr></tbody>
+        <tbody><tr><th scope="row">料金（税込）</th><td>50,000円</td><td>148,000円</td><td class="hl">198,000円</td></tr><tr><th scope="row">機材・検査キット代</th><td>含む（約1万円相当）</td><td>含む</td><td class="hl">含む（約5万円相当）</td></tr><tr><th scope="row">リブレ</th><td>1個（14日間）</td><td>1個（前半14日間）</td><td class="hl">2個（1か月目と2か月目）</td></tr><tr><th scope="row">検査</th><td>なし</td><td>栄養検査</td><td class="hl">栄養検査＋腸内検査</td></tr><tr><th scope="row">個別面談</th><td>2回</td><td>3回</td><td class="hl">5回（2週ごと）</td></tr><tr><th scope="row">LINEでの伴走</th><td>14日間</td><td>1か月</td><td class="hl">2か月＋終了後1か月</td></tr><tr><th scope="row">レポート</th><td>14日間のレポート</td><td>＋栄養検査の読み解き</td><td class="hl">比較レポート＋検査2種の読み解き</td></tr><tr><th scope="row">もらえるもの</th><td>「反応した食事」メモ</td><td>「食べ方ルール」</td><td class="hl">「整え方ガイド」</td></tr></tbody>
       </table>
     </div>
     <h3 class="menu-sub">お申し込みからの流れ</h3>
