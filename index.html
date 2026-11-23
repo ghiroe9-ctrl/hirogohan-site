@@ -284,6 +284,9 @@ button.btn{border:0;font:inherit;font-weight:700;cursor:pointer}
 @media (max-width:720px){.insights{grid-template-columns:1fr}}
 .insights li{background:var(--surface);border:1px solid var(--line);border-radius:14px;padding:18px;color:var(--muted);font-size:14.5px;display:grid;gap:4px}
 .insights b{color:var(--ink);font-family:var(--display);font-size:16px}
+.insights > li{align-content:start}
+.insights li ul{align-content:start;margin:4px 0 0;padding-left:1.15em;display:grid;gap:6px;list-style:disc}
+.insights li ul li{background:none;border:0;padding:0;display:list-item;border-radius:0;font-size:14px;line-height:1.75}
 .fav-group{display:grid;grid-template-columns:220px 1fr;gap:20px;padding-block:22px;border-top:1px solid var(--line)}
 .fav-group:first-of-type{border-top:0}
 @media (max-width:720px){.fav-group{grid-template-columns:1fr;gap:12px}}
@@ -518,15 +521,15 @@ nav .logo-sub{display:none}
       <div class="how-block pro">
         <div class="how-label"><i>03 ／ 有料プラン・開発中</i></div>
         <h4>体のデータとつないで、自分専用のダッシュボードに</h4>
-        <p>API連携で、体組成計やスマートウォッチのデータと食事を組み合わせられるよう準備しています。</p>
+        <p>食事コーチの食事履歴に、体組成計やスマートウォッチのデータ、筋トレメモ、手入力のメモ、体型や肌の写真まで組み合わせた「自分専用のダッシュボード」を、いま僕自身が使いながらつくっています。</p>
         <div class="flow">
-          <div class="srcs"><span>InBody</span><span>Apple ヘルスケア</span><span>Fitbit</span><span>Google Health</span></div>
+          <div class="srcs"><span>InBody</span><span>Apple ヘルスケア</span><span>Fitbit</span><span>Google Health</span><span>筋トレメモ</span><span>手入力のメモ</span><span>体の写真（撮影・アップロード）</span><span>肌の状態</span></div>
           <div class="arrow" aria-hidden="true">→</div>
-          <div class="node hub">食事コーチ<small>食事・カロリー・栄養</small></div>
+          <div class="node hub">食事コーチ<small>食事履歴・カロリー・栄養</small></div>
           <div class="arrow" aria-hidden="true">→</div>
-          <div class="node">自分専用ダッシュボード<small>体重・体組成・睡眠・活動量と食事を一元管理</small></div>
+          <div class="node">自分専用ダッシュボード<small>体重・体組成・睡眠・活動量・筋トレ・体型や肌の変化と、食事をまとめて管理</small></div>
         </div>
-        <p class="pro-note">ひろ自身は、この形で体のデータと食事をまとめて管理しています。つなぎ方は、公式LINEで順番に共有していきます。</p>
+        <p class="pro-note">いまは僕自身がこのダッシュボードで毎日の体と食事を管理しながら、開発を進めています。形になったら、公式LINEで先にご案内します。</p>
       </div>
 
       <div class="how-cta">
@@ -593,13 +596,13 @@ nav .logo-sub{display:none}
       <div class="panel">
         <p class="eyebrow">First Steps</p>
         <h3>最初に変えたこと</h3>
-        <ul><li>冷凍食品やコンビニごはん</li><li>カップラーメンやファストフード</li><li>エナジードリンク</li><li>飲み物は水を中心に</li></ul>
+        <ul><li>まずは冷凍食品とカップラーメンをやめた</li><li>次に、コンビニ弁当とファストフードもやめた</li><li>清涼飲料水（果糖ブドウ糖液糖入りの飲み物）とエナジードリンクをやめた</li><li>飲み物は、基本的に水かノンカフェインのお茶に</li></ul>
         <p class="small">ストレスがあると、ジャンクフードやお酒に手が伸びることもあります。無理に制限しすぎず、やめたり戻したりを繰り返しながら続けています。</p>
       </div>
       <div class="panel">
         <p class="eyebrow">Changes</p>
         <h3>続けてみて変わったこと</h3>
-        <ul><li>肌にツヤとやわらかさが出て、年齢より若く見られることが増えた</li><li>後頭部に定期的にできていたブツブツが減った</li><li>顔のニキビが大幅に減った</li></ul>
+        <ul><li>肌の乾燥がやわらいで、ツヤが出てきた</li><li>定期的にできていた顔のブツブツやおできが減った</li></ul>
         <p class="small">※ 僕個人の体験です。</p>
       </div>
     </div>
@@ -655,11 +658,12 @@ nav .logo-sub{display:none}
     </div>
     <p class="quote">「体にいい」と言われるものが、<br>自分に合うとは限らない。</p>
     <ul class="insights">
-      <li><b>血糖値</b>実際に測ってみると、カップラーメンやファストフードを食べたあとに数値が大きく上がるのを実感しました。</li>
-      <li><b>腸内環境</b>お腹が張りやすい、便がゆるくなりやすいことから、食べる順番や日々の食事内容を見直しました。</li>
-      <li><b>発酵食品</b>腸に良いとされる発酵食品も、僕の場合は摂りすぎるとお腹にガスが溜まりやすいことが分かりました。</li>
-      <li><b>タンパク質</b>「たくさん摂ったほうがいい」と言われますが、消化しきれない人もいます。僕がまさにそうで、今はプロテインを一旦お休みしています。</li>
+      <li><b>血糖値（リブレで測ってわかったこと）</b><ul><li>朝食を抜いてお昼を食べたとき、数値が大きく上がった</li><li>カップラーメンやファストフードのあとは200mg/dL近くまで上がり、血糖値の急上昇（血糖スパイク）を体と数値で実感した</li><li>食後にひどく眠くなる原因が、ここにあると分かった</li></ul></li>
+      <li><b>食べる順番で、上がり方をゆるやかに</b><ul><li>まず葉野菜や海藻など、食物繊維の多いものから食べる</li><li>そのあとに、ご飯などの主食（炭水化物）</li><li>急な上がり方を抑えられるよう、毎食これを意識するようになった</li></ul></li>
+      <li><b>腸内環境・腸活</b><ul><li>お腹の張りやすさから、食べる順番や毎日の食事内容を見直した</li><li>軟便タイプか便秘タイプかで、合う腸活は人それぞれ違う</li><li>発酵食品や発酵性食物繊維は取り入れ方を工夫。善玉菌ばかり摂りすぎると、かえって合わない反応が出る人もいる</li></ul></li>
+      <li><b>タンパク質とサプリは「分けて摂る」</b><ul><li>プロテインを飲めばいいわけではない。消化しきれないと、ガスが出やすくなったりお腹がゆるくなったりする。僕はEAAなど、アミノ酸の形で摂るようにした</li><li>水溶性ビタミンなどのサプリは、1日分を1回でまとめず3〜4回に分ける。一度にたくさん摂っても吸収しきれないため</li><li>タンパク質も普段の食事も、1回で摂りすぎない「分食」を意識している</li></ul></li>
     </ul>
+    <p class="small" style="margin-top:12px">※ 僕自身の測定と体験から分かったことです。体に合う方法は人によって違います。</p>
     <p class="note">だからこそ、まずは自分の体を知ることから。次のアイテムは、僕自身が自分の体を知るきっかけになったものです。</p>
   </section>
 
@@ -673,6 +677,7 @@ nav .logo-sub{display:none}
       <div class="item"><div class="top"><span class="eyebrow">腸内環境</span><span class="pr">取扱</span></div><h3>腸内環境検査キット</h3><p>自宅で採取して送るだけ。自分の腸内環境の傾向を知って、食事を見直すきっかけにできます。</p><a href="gut-test.html">僕の体験記を読む →</a><a data-cta="items" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで詳しく聞く →</a></div>
       <div class="item"><div class="top"><span class="eyebrow">腸内フローラ</span><span class="pr">PR</span></div><h3>腸内フローラ検査（マイキンソー）</h3><p>僕が最初に受けた検査。自宅で採取してポストに出すだけで、約1か月後に結果がスマホで見られます。まず気軽に傾向を知りたい人に。</p><a href="mykinso.html">僕の体験記を読む →</a><a href="https://px.a8.net/svt/ejp?a8mat=4BEL1L+6TW1MA+5SF2+5YJRM" rel="nofollow sponsored" target="_blank">公式サイトで見る（PR） →</a></div>
       <div class="item"><div class="top"><span class="eyebrow">血糖値</span><span class="pr">取扱</span></div><h3>血糖値の見える化（リブレ）</h3><p>食事のあとの血糖値の動きを記録できます。どの食べ方が自分に合うかを知る手がかりに。</p><a href="libre.html">僕の体験記を読む →</a><a data-cta="items" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで詳しく聞く →</a></div>
+      <div class="item"><div class="top"><span class="eyebrow">遺伝子</span><span class="pr">受検済</span></div><h3>遺伝子検査（ジーンクエスト）</h3><p>生まれ持った体質の傾向を知る検査。僕も受けて、食事やトレーニングの考え方の参考にしています。</p><a href="https://genequest.jp/" target="_blank" rel="noopener">公式サイトで見る →</a><a data-cta="items" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで詳しく聞く →</a></div>
       <div class="item"><div class="top"><span class="eyebrow">サプリメント</span><span class="pr">取扱</span></div><h3>オーソサプリほか</h3><p>検査や日々の食事を振り返ったうえで、足りないものを補う選択肢として紹介しています。</p><a data-cta="items" href="https://line.me/R/ti/p/@433gemgx" target="_blank" rel="noopener">LINEで詳しく聞く →</a></div>
     </div>
     <p class="note">※ ひろは代理店としてこれらの商品を取り扱っています（「PR」のついたものはアフィリエイトリンクです）。医療の専門家ではないため、診断や治療の代わりにはなりません。持病のある方や治療中の方は、医師にご相談ください。</p>
@@ -906,7 +911,8 @@ nav .logo-sub{display:none}
     <div class="work">
       <div>
         <p style="margin-bottom:12px">次のようなご相談をお受けしています。</p>
-        <ul><li>健康・生活習慣に関する商品のPR、レビュー</li><li>SNS投稿・記事の執筆</li><li>習慣づくりに関する取材</li></ul>
+        <ul><li>健康・生活習慣に関する商品のPR、レビュー</li><li>SNS投稿・記事の執筆</li><li>習慣づくりに関する取材</li><li>セミナー・講演のご依頼</li><li>法人向けの研修</li></ul>
+        <p class="small" style="margin-top:10px">「こんなことは頼める？」という段階でも、お気軽にご相談ください。</p>
       </div>
       <div class="contact">
         <p class="eyebrow">Contact</p>
