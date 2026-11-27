@@ -184,6 +184,34 @@ button.btn{border:0;font:inherit;font-weight:700;cursor:pointer}
 .how-head{display:grid;gap:8px;text-align:center;margin-top:20px}
 .how-head h3{font-size:clamp(22px,4vw,30px)}
 .how-head p{color:var(--muted);font-size:15px}
+.rec{background:#fff;border-radius:22px;overflow:hidden;box-shadow:0 18px 40px rgba(0,0,0,.22);color:#1b1b1b;font-size:13px;text-align:left}
+.rec-top{background:linear-gradient(135deg,#1F9A4A,#3FBF5F);color:#fff;padding:16px 18px 14px}
+.rec-row{display:flex;justify-content:space-between;gap:8px;font-size:13px}.rec-row.sm{font-size:11.5px;opacity:.95;margin-top:6px}
+.rec-nums{display:grid;grid-template-columns:1fr 1fr;margin:10px 0 12px}.rec-nums>div+div{border-left:1px solid rgba(255,255,255,.4);padding-left:12px}
+.rec-nums small{display:block;font-size:11.5px;opacity:.9}.rec-nums strong{font-size:34px;line-height:1.1;font-weight:800}
+.rec-prog{height:8px;border-radius:9px;background:rgba(255,255,255,.35)}.rec-prog i{display:block;height:100%;border-radius:9px;background:#fff}
+.rec>img{display:block;width:100%;aspect-ratio:4/3;object-fit:cover;border:0!important;border-radius:0!important;box-shadow:none!important}
+.rec-body{padding:14px 18px 18px}
+.rec-bar{display:grid;grid-template-columns:34px 1fr 64px;align-items:center;gap:8px;font-size:12px;color:#5d6670;margin:3px 0}
+.rec-bar i{display:block;height:8px;background:#eef0f2;border-radius:9px;overflow:hidden}.rec-bar i b{display:block;height:100%;border-radius:9px}
+.rec-bar em{font-style:normal;text-align:right}
+.rec-dish{margin:10px 0 0;padding:8px 0;border-top:1px solid #e6e8ea;border-bottom:1px solid #e6e8ea;color:#6b7279;font-size:12.5px}
+.rec-adv{margin:10px 0 4px;color:#1F8A44;font-weight:800;font-size:14px}
+.rec ul{margin:0;padding-left:1.1em;display:grid;gap:3px;font-size:12.5px;line-height:1.6}
+.rec ul li::marker{color:#2DB55A}
+.ex-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:18px}
+@media (max-width:980px){.ex-grid{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.ex-grid{grid-template-columns:1fr}}
+.ex-card{margin:0;background:var(--bg);border:1px solid var(--line);border-radius:18px;overflow:hidden;display:grid;grid-template-rows:auto 1fr}
+.ex-photo{position:relative;aspect-ratio:4/3;overflow:hidden}.ex-photo img{display:block;width:100%!important;height:100%!important;object-fit:cover}
+.ex-tag{position:absolute;left:10px;top:10px;background:#2F7A55;color:#fff;font-size:11.5px;font-weight:700;border-radius:99px;padding:3px 10px}
+.ex-tag.out{background:#C9733A}
+.ex-card figcaption{padding:12px 14px 14px;display:grid;gap:3px;align-content:start}
+.ex-card figcaption b{font-size:14px;line-height:1.5}
+.ex-card figcaption strong{font-size:24px;font-family:var(--display);color:var(--ink)}.ex-card figcaption strong small{font-size:12px;font-weight:600}
+.ex-pfc{font-size:12.5px;font-weight:700;color:var(--ink)}.ex-sub{font-size:12px;color:var(--muted)}
+.ex-adv{font-size:12.5px;color:var(--muted);line-height:1.65;margin-top:6px;padding-top:8px;border-top:1px dashed var(--line)}
+.ex-note{font-size:12px;color:var(--muted);margin-top:12px}
 .how-block{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:28px}
 @media (max-width:720px){.how-block{padding:20px}}
 .how-label{display:flex;align-items:center;gap:10px;margin-bottom:6px}
@@ -456,8 +484,18 @@ nav .logo-sub{display:none}
       </div>
       <figure class="coach-shot">
         <span class="coach-badge">無料</span>
-        <img src="img/coach-record.jpg" alt="食事コーチアプリの記録画面。この食事697kcal、今日の残り575kcal、PFC・食物繊維・塩分のバー、コーチのアドバイスが表示されている" width="591" height="1123" loading="lazy">
-        <figcaption>実際の記録画面（ひろの食事）。カロリー・栄養素は推定値です。</figcaption>
+        <div class="rec" role="img" aria-label="食事コーチの記録画面の例。チキンソテー定食 約780kcal、PFCと食物繊維・塩分のバー、コーチのアドバイス">
+          <div class="rec-top"><div class="rec-row"><b>記録しました ✓</b><span>🔥 12日連続</span></div>
+            <div class="rec-nums"><div><small>この食事</small><strong>780</strong> kcal</div><div><small>今日の残り</small>あと <strong>349</strong> kcal</div></div>
+            <div class="rec-prog"><i style="width:82%"></i></div><div class="rec-row sm"><span>今日の摂取</span><span>1,560 / 1,909 kcal</span></div></div>
+          <img src="img/meal-home-dinner.jpg" alt="家で作ったチキンソテー定食。鶏もものソテーとサラダ、もち麦ごはん、キャベツと豚のスープ、きんぴら、なすとピーマンの煮びたし" width="900" height="911" loading="lazy">
+          <div class="rec-body"><div class="rec-bar"><span>P</span><i><b style="width:38%;background:#2F9E4F"></b></i><em>42/112g</em></div><div class="rec-bar"><span>F</span><i><b style="width:60%;background:#EA8A3A"></b></i><em>32/53g</em></div><div class="rec-bar"><span>C</span><i><b style="width:33%;background:#3E80C8"></b></i><em>80/246g</em></div><div class="rec-bar"><span>繊維</span><i><b style="width:41%;background:#7B4FE0"></b></i><em>9/22g</em></div><div class="rec-bar"><span>塩分</span><i><b style="width:45%;background:#D93A6A"></b></i><em>3.4/7.5g</em></div>
+            <p class="rec-dish">チキンソテー定食（もち麦ごはん・スープ・副菜2品）</p>
+            <p class="rec-adv">コーチのアドバイス</p>
+            <ul><li>もち麦ごはんと副菜2品で、食物繊維がしっかりとれています</li><li>鶏ももの皮を外すと、脂質をもう少し抑えられます</li><li>副菜とスープから先に食べると、血糖値の上がり方がゆるやかに</li></ul>
+          </div>
+        </div>
+        <figcaption>記録画面のイメージ（ひろの家ごはん）。カロリー・栄養素は写真からの推定値です。</figcaption>
       </figure>
     </div>
       <div class="how" id="coach-how">
@@ -473,8 +511,8 @@ nav .logo-sub{display:none}
         <div class="chats">
           <div class="chat" aria-label="写真で記録する例">
             <span class="chat-tag">📷 写真で</span>
-            <div class="bub photo me"><img src="img/coach-meal.jpg" alt="納豆しらす卵丼と麻婆豆腐の写真" width="150" height="67" loading="lazy"></div>
-            <div class="bub ai"><b>697 kcal</b>納豆しらす卵丼・麻婆豆腐<small>P 73g ／ F 52g ／ C 141g</small></div>
+            <div class="bub photo me"><img src="img/coach-meal.jpg" alt="外で食べたもつ煮定食の写真" width="150" height="77" loading="lazy"></div>
+            <div class="bub ai"><b>約 1,050 kcal</b>もつ煮定食（外食）<small>P 38g ／ F 32g ／ C 150g</small></div>
           </div>
           <div class="chat" aria-label="音声で記録する例">
             <span class="chat-tag">🎤 声で</span>
@@ -488,6 +526,22 @@ nav .logo-sub{display:none}
             <div class="bub ai"><b>約 620 kcal</b>たんぱく質しっかり◎ 夜は野菜を多めにすると今日のバランスが整います</div>
           </div>
         </div>
+      </div>
+
+      <div class="how-block">
+        <div class="how-label"><i>実例</i><h4>家ごはんも外食も、写真1枚でここまでわかる</h4></div>
+        <p>ひろが実際に食べた食事で見てみると、こんな感じです。カロリーとPFCに加えて、食物繊維や塩分、ひとことアドバイスまで返ってきます。</p>
+        <div class="ex-grid">
+          <figure class="ex-card"><div class="ex-photo"><img src="img/meal-home-breakfast.jpg" alt="トースト2枚とサラダ、味噌汁、グリーンスムージーの朝ごはん" width="900" height="633" loading="lazy"><span class="ex-tag">家ごはん・朝</span></div>
+            <figcaption><b>トースト2種・サラダ・具だくさん味噌汁</b><strong>約 720<small> kcal</small></strong><span class="ex-pfc">P 34g／F 30g／C 78g</span><span class="ex-sub">食物繊維 8.5g／塩分 3.8g</span><span class="ex-adv">朝からたんぱく質30g超え。目玉焼きとサーモンで、午前中の間食が減りやすい組み合わせ。</span></figcaption></figure>
+          <figure class="ex-card"><div class="ex-photo"><img src="img/meal-home-dinner.jpg" alt="鶏もものソテーとサラダ、もち麦ごはん、スープ、副菜2品" width="900" height="911" loading="lazy"><span class="ex-tag">家ごはん・夜</span></div>
+            <figcaption><b>チキンソテー定食（もち麦ごはん）</b><strong>約 780<small> kcal</small></strong><span class="ex-pfc">P 42g／F 32g／C 80g</span><span class="ex-sub">食物繊維 9g／塩分 3.4g</span><span class="ex-adv">もち麦と副菜2品で食物繊維が多め。皮を外せば脂質もさらに抑えられます。</span></figcaption></figure>
+          <figure class="ex-card"><div class="ex-photo"><img src="img/meal-out-motsuni.jpg" alt="定食屋のもつ煮定食。ごはん、もつ煮、おひたし、漬物、小そば" width="900" height="1327" loading="lazy"><span class="ex-tag out">外食・定食屋</span></div>
+            <figcaption><b>もつ煮定食（ごはん大盛り）</b><strong>約 1,050<small> kcal</small></strong><span class="ex-pfc">P 38g／F 32g／C 150g</span><span class="ex-sub">食物繊維 6g／塩分 6.5g</span><span class="ex-adv">ごはん大盛りで炭水化物が多め。汁を少し残すだけで、塩分をぐっと抑えられます。</span></figcaption></figure>
+          <figure class="ex-card"><div class="ex-photo"><img src="img/meal-out-hamburg.jpg" alt="和食店の煮込みハンバーグ定食。豚汁、ごはん、小鉢3品" width="900" height="569" loading="lazy"><span class="ex-tag out">外食・和食店</span></div>
+            <figcaption><b>煮込みハンバーグ定食（豚汁・小鉢3品）</b><strong>約 980<small> kcal</small></strong><span class="ex-pfc">P 40g／F 42g／C 105g</span><span class="ex-sub">食物繊維 8g／塩分 6.0g</span><span class="ex-adv">小鉢が3品あるのが◎。小鉢から先に食べて、ごはんは最後にすると血糖値の上がり方がゆるやかに。</span></figcaption></figure>
+        </div>
+        <p class="ex-note">※ 数値は写真からの推定値の例です。量や味付けによって変わります。</p>
       </div>
 
       <div class="how-block">
